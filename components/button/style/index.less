@@ -73,9 +73,9 @@
   &:before {
     position: absolute;
     top: -1px;
-    left: -1px;
+    .posDir(-1px);
     bottom: -1px;
-    right: -1px;
+    .posiDir(-1px);
     background: #fff;
     opacity: 0.35;
     content: '';
@@ -95,7 +95,7 @@
   }
 
   &&-loading:not(&-circle):not(&-circle-outline):not(&-icon-only) {
-    padding-left: 29px;
+    .padding-dir(29px);
     pointer-events: none;
     position: relative;
     .@{iconfont-css-prefix} {
@@ -104,7 +104,7 @@
   }
 
   &-sm&-loading:not(&-circle):not(&-circle-outline):not(&-icon-only) {
-    padding-left: 24px;
+    .padding-dir(24px);
     .@{iconfont-css-prefix} {
       .margin-dir(-17px);
     }
@@ -146,11 +146,11 @@
   }
 
   &-two-chinese-chars:first-letter {
-    letter-spacing: .34em;
+    .letter-spacing(.34em);
   }
 
   &-two-chinese-chars > * {
-    letter-spacing: .34em;
+    .letter-spacing(.34em);
     .margin-idir(-.34em);
   }
 

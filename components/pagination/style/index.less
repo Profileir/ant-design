@@ -91,7 +91,7 @@
     &:after {
       content: "•••";
       display: block;
-      letter-spacing: 2px;
+      .letter-spacing(2px);
       color: @disabled-color;
       text-align: center;
     }
@@ -101,7 +101,7 @@
       &:after {
         color: @primary-color;
         .iconfont-size-under-12px(8px);
-        letter-spacing: -1px;
+        .letter-spacing(-1px);
         font-family: "anticon";
       }
     }

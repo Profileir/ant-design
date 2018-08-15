@@ -136,3 +136,11 @@
 .posiDir(@value) when not(@dir="ltr") {
   left: @value;
 }
+
+//letter spacing
+.letter-spacing(@value) when (@dir="ltr") {
+  letter-spacing: @value;
+}
+.letter-spacing(@value) when not(@dir="ltr") {
+  letter-spacing: 0;
+}
