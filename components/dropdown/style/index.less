@@ -6,7 +6,7 @@
 .@{dropdown-prefix-cls} {
   .reset-component;
   position: absolute;
-  left: -9999px;
+  .posDir(-9999px);
   top: -9999px;
   z-index: @zindex-dropdown;
   display: block;
@@ -40,7 +40,7 @@
     list-style-type: none;
     padding: 4px 0;
     margin: 0;
-    text-align: left;
+    .dirAlign();
     background-color: @component-background;
     border-radius: @border-radius-base;
     box-shadow: @box-shadow-base;
@@ -72,7 +72,7 @@
 
       > .anticon:first-child {
         min-width: 12px;
-        margin-right: 8px;
+        .margin-idir(8px);
       }
 
       > a {
@@ -116,7 +116,7 @@
       }
       .@{dropdown-prefix-cls}-menu-submenu-arrow {
         position: absolute;
-        right: @padding-xs;
+        .posiDir(@padding-xs);
         &:after {
           font-family: "anticon" !important;
           font-style: normal;
@@ -128,7 +128,7 @@
     }
 
     &-submenu-title {
-      padding-right: 26px;
+      .padding-idir(26px);
     }
 
     &-submenu-vertical {
@@ -137,10 +137,10 @@
 
     &-submenu-vertical > & {
       top: 0;
-      left: 100%;
+      .posDir(100%);
       position: absolute;
       min-width: 100%;
-      margin-left: 4px;
+      .margin-dir(4px);
       transform-origin: 0 0;
     }
 
@@ -197,8 +197,8 @@
   white-space: nowrap;
 
   &.@{ant-prefix}-btn-group > .@{ant-prefix}-btn:last-child:not(:first-child) {
-    padding-left: @padding-xs;
-    padding-right: @padding-xs;
+    .padding-dir(@padding-xs);
+    .padding-idir(@padding-xs);
   }
   .@{iconfont-css-prefix}-down {
     .iconfont-size-under-12px(10px);

@@ -8,7 +8,7 @@
   .reset-component;
   outline: none;
   margin-bottom: 0;
-  padding-left: 0; // Override default ul/ol
+  .padding-dir(0); // Override default ul/ol
   list-style: none;
   box-shadow: @box-shadow-base;
   color: @menu-item-color;
@@ -64,9 +64,9 @@
       position: absolute;
       background-color: transparent;
       top: 0;
-      left: 0;
+      .posDir(0);
       bottom: 0;
-      right: 0;
+      .posiDir(0);
       content: '';
     }
   }
@@ -112,24 +112,24 @@
   &-inline,
   &-vertical,
   &-vertical-left {
-    border-right: @border-width-base @border-style-base @border-color-split;
+    .idirBorder(@border-width-base @border-style-base @border-color-split);
   }
   &-vertical-right {
-    border-left: @border-width-base @border-style-base @border-color-split;
+    .dirBorder(@border-width-base @border-style-base @border-color-split);
   }
 
   &-vertical&-sub,
   &-vertical-left&-sub,
   &-vertical-right&-sub {
-    border-right: 0;
+    .idirBorder(0);
     padding: 0;
     transform-origin: 0 0;
     .@{menu-prefix-cls}-item {
-      border-right: 0;
-      margin-left: 0;
-      left: 0;
+      .idirBorder(0);
+      .dirBorder(0);
+      .posDir(0);
       &:after {
-        border-right: 0;
+        .idirBorder(0);
       }
     }
     > .@{menu-prefix-cls}-item,
@@ -156,7 +156,7 @@
     transition: color .3s @ease-in-out, border-color .3s @ease-in-out, background .3s @ease-in-out, padding .15s @ease-in-out;
     .@{iconfont-css-prefix} {
       min-width: 14px;
-      margin-right: 10px;
+      .margin-idir(10px);
       transition: font-size .15s @ease-out, margin .3s @ease-in-out;
       + span {
         transition: opacity .3s @ease-in-out, width .3s @ease-in-out;
@@ -197,7 +197,7 @@
         transition: transform .3s @ease-in-out;
         position: absolute;
         top: 50%;
-        right: 16px;
+        .posiDir(16px);
         width: 10px;
         &:before,
         &:after {
@@ -267,7 +267,7 @@
     > .@{menu-prefix-cls}-submenu {
       position: relative;
       top: 1px;
-      float: left;
+      .dir();
       border-bottom: 2px solid transparent;
 
       &:hover,
@@ -312,10 +312,10 @@
       &:after {
         content: "";
         position: absolute;
-        right: 0;
+        .posiDir(0);
         top: 0;
         bottom: 0;
-        border-right: 3px solid @menu-highlight-color;
+        .idirBorder(3px solid @menu-highlight-color);
         transform: scaleY(.0001);
         opacity: 0;
         transition: transform .15s @ease-out, opacity .15s @ease-out;
@@ -367,7 +367,7 @@
     }
 
     .@{menu-prefix-cls}-submenu-title {
-      padding-right: 34px;
+      .padding-idir(34px);
     }
   }
 
@@ -376,7 +376,7 @@
     > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-item-group > .@{menu-prefix-cls}-item-group-list > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
-      left: 0;
+      .posDir(0);
       text-overflow: clip;
       padding: 0 (@menu-collapsed-width - 16px) / 2 !important;
       .@{menu-prefix-cls}-submenu-arrow {
@@ -407,8 +407,8 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      padding-left: 4px;
-      padding-right: 4px;
+      .padding-dir(4px);
+      .padding-idir(4px);
     }
   }
 
@@ -417,7 +417,7 @@
     padding: 0;
     .@{menu-prefix-cls}-item,
     .@{menu-prefix-cls}-submenu-title {
-      padding: 0 16px 0 28px;
+      .padding(0; 16px; 0; 28px);
     }
   }
 
@@ -442,7 +442,7 @@
     }
 
     & .@{menu-prefix-cls}-item-group-title {
-      padding-left: 32px;
+      .padding-dir(32px);
     }
   }
 
