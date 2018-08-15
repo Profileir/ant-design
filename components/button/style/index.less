@@ -27,8 +27,8 @@
     .btn-primary;
 
     .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
-      border-right-color: @btn-group-border;
-      border-left-color: @btn-group-border;
+      .idirBorderColor(@btn-group-border);
+      .dirBorderColor(@btn-group-border);
 
       &:disabled {
         border-color: @btn-default-border;
@@ -37,18 +37,18 @@
 
     .@{btn-prefix-cls}-group &:first-child {
       &:not(:last-child) {
-        border-right-color: @btn-group-border;
+        .idirBorderColor(@btn-group-border);
         &[disabled] {
-          border-right-color: @btn-default-border;
+          .idirBorderColor(@btn-default-border);
         }
       }
     }
 
     .@{btn-prefix-cls}-group &:last-child:not(:first-child),
     .@{btn-prefix-cls}-group & + & {
-      border-left-color: @btn-group-border;
+      .dirBorderColor(@btn-group-border);
       &[disabled] {
-        border-left-color: @btn-default-border;
+        .dirBorderColor(@btn-default-border);
       }
     }
   }
@@ -99,14 +99,14 @@
     pointer-events: none;
     position: relative;
     .@{iconfont-css-prefix} {
-      margin-left: -14px;
+      .margin-dir(-14px);
     }
   }
 
   &-sm&-loading:not(&-circle):not(&-circle-outline):not(&-icon-only) {
     padding-left: 24px;
     .@{iconfont-css-prefix} {
-      margin-left: -17px;
+      .margin-dir(-17px);
     }
   }
 
@@ -115,8 +115,8 @@
   }
 
   &:not(&-circle):not(&-circle-outline)&-icon-only {
-    padding-left: 8px;
-    padding-right: 8px;
+    .padding-dir(8px);
+    .padding-idir(8px);
   }
 
   // http://stackoverflow.com/a/21281554/3040605
@@ -128,7 +128,7 @@
   // To ensure that a space will be placed between character and `Icon`.
   > .@{iconfont-css-prefix} + span,
   > span + .@{iconfont-css-prefix} {
-    margin-left: 8px;
+    .margin-dir(8px);
   }
 
   &-background-ghost {
@@ -151,7 +151,7 @@
 
   &-two-chinese-chars > * {
     letter-spacing: .34em;
-    margin-right: -.34em;
+    .margin-idir(-.34em);
   }
 
   &-block {

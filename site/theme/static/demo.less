@@ -24,7 +24,7 @@
     cursor: pointer;
     font-size: 14px;
     color: #3b4357;
-    margin-left: 8px;
+    .margin-dir(8px);
     opacity: .8;
     transition: all .3s;
     top: -2px;
@@ -35,7 +35,7 @@
     position: absolute;
     top: -14px;
     padding: 1px 8px;
-    margin-left: -8px;
+    .margin-dir(-8px);
     color: #777;
     border-radius: @border-radius-sm @border-radius-sm 0 0;
     background: #fff;
@@ -51,12 +51,12 @@
 
   a.edit-button {
     position: absolute;
-    right: -16px;
+    .posiDir(-16px);
     top: 7px;
     font-size: 12px;
     transform: scale(0.9);
     background: #fff;
-    padding-right: 6px;
+    .padding-idir(6px);
     text-decoration: none;
   }
 
@@ -94,7 +94,7 @@
     > p {
       font-size: 12px;
       margin: 0.5em 0;
-      padding-right: 25px;
+      .padding-idir(25px);
       width: 100%;
       word-break: break-word;
     }
@@ -107,7 +107,7 @@
 
   .code-expand-icon {
     position: absolute;
-    right: 16px;
+    .posiDir(16px);
     bottom: 23px;
     cursor: pointer;
     width: 16px;
@@ -121,7 +121,7 @@
     transition: all 0.4s;
     user-select: none;
     position: absolute;
-    left: 0;
+    .posDir(0);
     top: 0;
     margin: 0;
     max-width: 100%;
@@ -172,12 +172,12 @@
   &-actions {
     position: absolute;
     top: 10px;
-    right: 12px;
-    text-align: right;
+    .posiDir(12px);
+    .idirAlign();
     > i,
     > form {
       display: inline-block;
-      margin-left: 8px;
+      .margin-dir(8px);
     }
   }
 

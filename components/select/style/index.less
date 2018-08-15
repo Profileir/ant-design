@@ -13,7 +13,7 @@
   text-rendering: auto;
   opacity: 0;
   position: absolute;
-  right: @control-padding-horizontal - 1px;
+  .posiDir(@control-padding-horizontal - 1px);
   z-index: 1;
   background: @component-background;
   top: 50%;
@@ -57,7 +57,7 @@
     .iconfont-mixin();
     position: absolute;
     top: 50%;
-    right: @control-padding-horizontal - 1px;
+    .posiDir(@control-padding-horizontal - 1px);
     line-height: 1;
     margin-top: -@font-size-sm / 2;
     transform-origin: 50% 50%;
@@ -108,17 +108,17 @@
     }
 
     &-selected-value {
-      float: left;
+      .dir();
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       max-width: 100%;
-      padding-right: 20px;
+      .padding-idir(20px);
     }
   }
 
   &-no-arrow &-selection-selected-value {
-    padding-right: 0;
+    .padding-idir(0);
   }
 
   &-disabled {
@@ -159,8 +159,8 @@
 
   &-selection__rendered {
     display: block;
-    margin-left: @control-padding-horizontal - 1px;
-    margin-right: @control-padding-horizontal - 1px;
+    .margin-dir(@control-padding-horizontal - 1px);
+    .margin-idir(@control-padding-horizontal - 1px);
     position: relative;
     line-height: @input-height-base - 2px;
     // https://github.com/ant-design/ant-design/issues/3481#issuecomment-254721026
@@ -217,7 +217,7 @@
     }
     .@{select-prefix-cls}-selection__clear,
     .@{select-prefix-cls}-arrow {
-      right: @control-padding-horizontal-sm;
+      .posiDir(@control-padding-horizontal-sm);
     }
   }
 
@@ -238,8 +238,8 @@
   &-search__field__placeholder { // for TreeSelect compatibility
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 9px;
+    .posDir(0);
+    .posiDir(9px);
     color: @input-placeholder-color;
     line-height: 20px;
     height: 20px;
@@ -248,17 +248,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    text-align: left;
+    .dirAlign();
   }
 
   &-search__field__placeholder {
-    left: @control-padding-horizontal;
+    .posDir(@control-padding-horizontal);
   }
 
   &-search__field__mirror {
     position: absolute;
     top: -9999px;
-    left: -9999px;
+    .posDir(-9999px);
     white-space: pre;
     pointer-events: none;
   }
@@ -285,7 +285,7 @@
     }
 
     > i {
-      float: right;
+      .idir();
     }
   }
 
@@ -296,7 +296,7 @@
     .clearfix;
 
     .@{select-prefix-cls}-search--inline {
-      float: left;
+      .dir();
       position: static;
       width: auto;
       padding: 0;
@@ -308,13 +308,13 @@
     }
 
     .@{select-prefix-cls}-selection__rendered {
-      margin-left: 5px;
+      .margin-dir(5px);
       margin-bottom: -3px;
       height: auto;
     }
 
     .@{select-prefix-cls}-selection__placeholder {
-      margin-left: 6px;
+      .margin-dir(6px);
     }
 
     > ul > li,
@@ -330,13 +330,13 @@
       border: 1px solid @border-color-split;
       border-radius: @border-radius-sm;
       cursor: default;
-      float: left;
-      margin-right: 4px;
+      .dir();
+      .margin-idir(4px);
       max-width: 99%;
       position: relative;
       overflow: hidden;
       transition: padding .3s @ease-in-out;
-      padding: 0 20px 0 10px;
+      .padding(0; 20px; 0; 10px);
       &__disabled {
         padding: 0 10px;
       }
@@ -362,7 +362,7 @@
       font-size: @font-size-sm;
       .iconfont-size-under-12px(10px);
       position: absolute;
-      right: 4px;
+      .posiDir(4px);
       &:hover {
         color: #404040;
       }
@@ -377,11 +377,11 @@
   }
 
   &-allow-clear &-selection--single &-selection-selected-value {
-    padding-right: 16px;
+    .padding-idir(16px);
   }
 
   &-allow-clear &-selection--multiple &-selection__rendered {
-    margin-right: 20px; // In case that clear button will overlap content
+    .margin-idir(20px); // In case that clear button will overlap content
   }
 
   &-open {
@@ -416,7 +416,7 @@
     }
   }
   &-combobox&-allow-clear &-selection:hover &-selection__rendered {
-    margin-right: 20px; // In case that clear button will overlap content
+    .margin-idir(20px); // In case that clear button will overlap content
   }
 }
 
@@ -450,7 +450,7 @@
   border-radius: @border-radius-base;
   box-sizing: border-box;
   z-index: @zindex-dropdown;
-  left: -9999px;
+  .posDir(-9999px);
   top: -9999px;
   position: absolute;
   outline: none;
@@ -459,7 +459,7 @@
   &-menu {
     outline: none;
     margin-bottom: 0;
-    padding-left: 0; // Override default ul/ol
+    .padding-dir(0); // Override default ul/ol
     list-style: none;
     max-height: 250px;
     overflow: auto;
@@ -469,7 +469,7 @@
       padding: 0;
 
       > .@{select-prefix-cls}-dropdown-menu-item {
-        padding-left: 20px;
+        .padding-dir(20px);
       }
     }
 
@@ -555,7 +555,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: @control-padding-horizontal;
+        .posiDir(@control-padding-horizontal);
         font-weight: bold;
         text-shadow: 0 0.1px 0, 0.1px 0 0, 0 -0.1px 0, -0.1px 0;
       }

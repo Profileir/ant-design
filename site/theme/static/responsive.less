@@ -3,7 +3,7 @@
 .nav-phone-icon {
   display: none;
   position: absolute;
-  right: 30px;
+  .posiDir(30px);
   top: 25px;
   z-index: 1;
   width: 16px;
@@ -48,7 +48,7 @@
     width: 100%;
   }
   .preview-image-box {
-    padding-left: 0;
+    .padding-dir(0);
     margin: 10px 0;
   }
 
@@ -75,7 +75,7 @@
           display: block;
         }
         .ant-btn {
-          margin: 16px 8% 0 8px;
+          .margin(16px; 8%; 0; 8px);
         }
       }
     }
@@ -127,13 +127,13 @@
     float: none;
     width: auto;
     padding-bottom: 30px;
-    border-right: 0;
+    .idirBorder(0);
   }
 
   .main-container {
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-right: 0;
+    .padding-dir(16px);
+    .padding-idir(16px);
+    .margin-idir(0);
     > .markdown > * {
       width: 100% !important;
     }
@@ -171,15 +171,15 @@
   }
 
   .prev-next-nav {
-    margin-left: 16px;
+    .margin-dir(16px);
     width: ~"calc(100% - 32px)";
   }
 
   .drawer {
     .ant-menu-inline .ant-menu-item:after,
     .ant-menu-vertical .ant-menu-item:after {
-      left: 0;
-      right: auto;
+      .posDir(0);
+      .posiDir(auto);
     }
   }
 
@@ -341,7 +341,7 @@
         width: 80%;
         margin: 0;
         max-width: initial;
-        padding-left: 16px;
+        .padding-dir(16px);
       }
     }
   }

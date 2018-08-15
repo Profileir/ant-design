@@ -1,7 +1,7 @@
 .preview-image-boxes {
   display: flex;
-  float: right;
-  margin: 0 0 70px 64px;
+  .idir();
+  .margin(0; 0; 70px; 64px);
   width: 496px;
   clear: both;
 
@@ -20,11 +20,11 @@
 
 .preview-image-box {
   width: 100%;
-  float: left;
+  .dir();
 }
 
 .preview-image-box + .preview-image-box {
-  margin-left: 24px;
+  .margin-dir(24px);
 }
 
 .preview-image-wrapper {
@@ -48,7 +48,7 @@
   + svg {
     position: absolute;
     top: 0;
-    left: 0;
+    .posDir(0);
   }
 }
 
@@ -60,7 +60,7 @@
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
+  .posDir(0);
 }
 
 .preview-image-wrapper.bad:after {
@@ -71,7 +71,7 @@
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
+  .posDir(0);
 }
 
 .preview-image-title {
@@ -149,8 +149,8 @@
 }
 
 .transition-video-player {
-  float: right;
-  padding: 0 0 70px 20px;
+  .idir();
+  .padding(0; 0; 70px; 20px);
   width: 600px;
 
   .preview-image-wrapper {

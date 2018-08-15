@@ -35,7 +35,7 @@ function getOffset(element: HTMLElement, target: HTMLElement | Window | null) {
   };
 }
 
-function noop() {}
+function noop() { }
 
 function getDefaultTarget() {
   return typeof window !== 'undefined' ? window : null;
@@ -109,7 +109,7 @@ export default class Affix extends React.Component<AffixProps, AffixState> {
     this.setState({ affixStyle: affixStyle as React.CSSProperties }, () => {
       const affixed = !!this.state.affixStyle;
       if ((affixStyle && !originalAffixStyle) ||
-          (!affixStyle && originalAffixStyle)) {
+        (!affixStyle && originalAffixStyle)) {
         onChange(affixed);
       }
     });
@@ -187,7 +187,7 @@ export default class Affix extends React.Component<AffixProps, AffixState> {
       });
     } else if (
       scrollTop < elemOffset.top + elemSize.height + (offsetBottom as number) - targetInnerHeight &&
-        offsetMode.bottom
+      offsetMode.bottom
     ) {
       // Fixed Bottom
       const targetBottomOffet = targetNode === window ? 0 : (window.innerHeight - targetRect.bottom);
@@ -231,12 +231,6 @@ export default class Affix extends React.Component<AffixProps, AffixState> {
       this.setTargetEventListeners(nextProps.target!);
 
       // Mock Event object.
-      this.updatePosition({});
-    }
-    if (
-      this.props.offsetTop !== nextProps.offsetTop ||
-      this.props.offsetBottom !== nextProps.offsetBottom
-    ) {
       this.updatePosition({});
     }
   }

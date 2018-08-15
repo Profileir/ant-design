@@ -1,15 +1,15 @@
 .toc {
   font-size: 12px;
   margin: 16px 0;
-  padding-left: 0;
-  border-left: 1px solid #ebedf0;
+  .padding-dir(0);
+  .dirBorder(1px solid #ebedf0);
   list-style: none;
 }
 
 ul.toc > li {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+  .margin-dir(0);
+  .padding-dir(0);
   line-height: 1.5;
   &:not(:last-child) {
     margin-bottom: 4px;
@@ -23,7 +23,7 @@ ul.toc > li {
 }
 
 .toc a {
-  padding-left: 16px;
+  .padding-dir(16px);
   display: block;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -31,8 +31,8 @@ ul.toc > li {
   text-overflow: ellipsis;
   color: @site-text-color;
   width: 110px;
-  border-left: 1px solid transparent;
-  margin-left: -1px;
+  .dirBorder(1px solid transparent);
+  .margin-dir(-1px);
 }
 
 .toc a:hover {
@@ -47,7 +47,7 @@ ul.toc > li {
 .toc-affix {
   position: absolute;
   top: 8px;
-  right: 20px;
+  .posiDir(20px);
   .ant-affix {
     background: #fff;
     overflow: auto;
@@ -57,7 +57,7 @@ ul.toc > li {
 .toc-affix-bottom {
   position: absolute;
   bottom: 88px;
-  right: 20px;
+  .posiDir(20px);
   .ant-affix {
     background: #fff;
   }

@@ -14,7 +14,7 @@ footer {
     text-align: center;
     .footer-center {
       display: inline-block;
-      text-align: left;
+      .dirAlign();
       > h2 {
         font-size: 16px;
         margin: 0 auto 24px;
@@ -23,12 +23,12 @@ footer {
 
         > .title-icon {
           width: 27px;
-          margin-right: 16px;
+          .margin-idir(16px);
         }
         > .anticon {
           font-size: 16px;
           position: absolute;
-          left: -22px;
+          .posDir(-22px);
           top: 3px;
           color: #aaa;
         }
@@ -54,13 +54,13 @@ footer {
     font-variant: tabular-nums;
     a {
       color: rgba(255, 255, 255, 0.65);
-      margin-left: 4px;
+      .margin-dir(4px);
       &:hover {
         color: #fff;
       }
     }
     .translate-button {
-      text-align: left;
+      .dirAlign();
     }
     .heart {
       color: #f73f51;
