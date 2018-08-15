@@ -1,0 +1,100 @@
+@import '../themes/default';
+
+@dir: "rtl";
+// Paddings
+.padding-dir ( @value) when (@dir="rtl") {
+  padding-right: @value;
+}
+.padding-dir (@value) when not(@dir="rtl") {
+  padding-left: @value;
+}
+.padding-idir ( @value) when (@dir="rtl") {
+  padding-left: @value;
+}
+.padding-idir (@value) when not(@dir="rtl") {
+  padding-right: @value;
+}
+
+//margins
+.margin-dir ( @value) when (@dir="rtl") {
+  margin-right: @value;
+}
+.margin-dir (@value) when not(@dir="rtl") {
+  margin-left: @value;
+}
+.margin-idir ( @value) when (@dir="rtl") {
+  padding-left: @value;
+}
+.margin-idir (@value) when not(@dir="rtl") {
+  padding-right: @value;
+}
+
+//floats
+.dir () when (@dir="rtl") {
+  float: right;
+}
+.dir () when not(@dir="rtl") {
+  float: left;
+}
+.idir () when (@dir="rtl") {
+  float: left;
+}
+.idir () when not(@dir="rtl") {
+  float: right;
+}
+
+//direction
+.direction () when (@dir="rtl") {
+  direction: rtl;
+}
+.direction () when not(@dir="rtl") {
+  direction: ltr;
+}
+.idirection () when (@dir="rtl") {
+  direction: ltr;
+}
+.idirection () when not(@dir="rtl") {
+  direction: rtl;
+}
+
+//Text aligns
+.diralign () when (@dir="rtl") {
+ text-align: right;
+}
+.diralign () when not(@dir="rtl") {
+  text-align: left;
+}
+.idiralign () when (@dir="rtl") {
+  text-align: left;
+}
+.idiralign () when not(@dir="rtl") {
+  text-align: right;
+}
+
+//Borders
+.dirborder (@border-width:1px; @border-color:@btn-default-border; @border-type:solid) when (@dir="rtl") {
+  border-right: @border-width @border-color @border-type;
+ }
+ .dirborder (@border-width:1px; @border-color:@btn-default-border; @border-type:solid) when not(@dir="rtl") {
+  border-left: @border-width @border-color @border-type;
+ }
+ .idirborder (@border-width:1px; @border-color:@btn-default-border; @border-type:solid) when (@dir="rtl") {
+  border-left: @border-width @border-color @border-type;
+ }
+ .idirborder (@border-width:1px; @border-color:@btn-default-border; @border-type:solid) when not(@dir="rtl") {
+  border-right: @border-width @border-color @border-type;
+ }
+
+ //Border radius
+ .dirBorderRadius (@value) when (@dir="rtl") {
+  border-radius: 0 @value @value 0 !important;
+ }
+ .dirBorderRadius (@value) when not(@dir="rtl") {
+  border-radius: @value 0 0 @value !important;
+ }
+ .idirBorderRadius (@value) when (@dir="rtl") {
+  border-radius: @value 0 0 @value !important;
+ }
+ .idirBorderRadius (@value) when not(@dir="rtl") {
+  border-radius: 0 @value @value 0 !important;
+ }
