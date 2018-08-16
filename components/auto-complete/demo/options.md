@@ -2,7 +2,7 @@
 order: 2
 title:
   zh-CN: 自定义选项
-  en-US: Customized
+  en-US: سفارشی
 ---
 
 ## zh-CN
@@ -42,7 +42,7 @@ class Complete extends React.Component {
       <AutoComplete
         style={{ width: 200 }}
         onSearch={this.handleSearch}
-        placeholder="input here"
+        placeholder="اینجا"
       >
         {children}
       </AutoComplete>

@@ -97,16 +97,24 @@
 
 //Border radius
 .dirBorderRadius (@value) when (@dir="ltr") {
-  border-radius: @value 0 0 @value;
+  // border-radius: @value 0 0 @value;
+  border-top-left-radius: @value;
+  border-bottom-left-radius: @value;
 }
 .dirBorderRadius (@value) when not(@dir="ltr") {
-  border-radius: 0 @value @value 0;
+  // border-radius: 0 @value @value 0;
+  border-top-right-radius: @value;
+  border-bottom-right-radius: @value;
 }
 .idirBorderRadius (@value) when (@dir="ltr") {
-  border-radius: 0 @value @value 0;
+  // border-radius: 0 @value @value 0;
+  border-top-right-radius: @value;
+  border-bottom-right-radius: @value;
 }
 .idirBorderRadius (@value) when not(@dir="ltr") {
-  border-radius: @value 0 0 @value;
+  // border-radius: @value 0 0 @value;
+  border-top-left-radius: @value;
+  border-bottom-left-radius: @value;
 }
 
 //Border colors
@@ -121,6 +129,20 @@
 }
 .idirBorderColor (@value) when not (@dir="ltr") {
   border-left-color: @value;
+}
+
+//Border width
+.dirBorderWidth (@value) when (@dir="ltr") {
+  border-left-width: @value;
+}
+.dirBorderWidth (@value) when not (@dir="ltr") {
+  border-right-width: @value;
+}
+.idirBorderWidth (@value) when (@dir="ltr") {
+  border-right-width: @value;
+}
+.idirBorderWidth (@value) when not (@dir="ltr") {
+  border-left-width: @value;
 }
 
 //Positions

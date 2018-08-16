@@ -16,7 +16,6 @@ Basic Usage, set datasource of autocomplete with `dataSource` property.
 
 ````jsx
 import { Icon, Input, AutoComplete } from 'antd';
-
 const Option = AutoComplete.Option;
 const OptGroup = AutoComplete.OptGroup;
 
@@ -96,7 +95,7 @@ function Complete() {
         size="large"
         style={{ width: '100%' }}
         dataSource={options}
-        placeholder="input here"
+        placeholder="اینجا"
         optionLabelProp="value"
       >
         <Input suffix={<Icon type="search" className="certain-category-icon" />} />
@@ -110,7 +109,7 @@ ReactDOM.render(<Complete />, mountNode);
 
 ````css
 .certain-category-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input-suffix {
-  right: 12px;
+  left: 12px;
 }
 
 .certain-category-search-dropdown .ant-select-dropdown-menu-item-group-title {
@@ -123,7 +122,7 @@ ReactDOM.render(<Complete />, mountNode);
 }
 
 .certain-category-search-dropdown .ant-select-dropdown-menu-item {
-  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .certain-category-search-dropdown .ant-select-dropdown-menu-item.show-all {
@@ -138,7 +137,7 @@ ReactDOM.render(<Complete />, mountNode);
 .certain-search-item-count {
  position: absolute;
  color: #999;
- right: 16px;
+ left: 16px;
 }
 
 .certain-category-search.ant-select-focused .certain-category-icon {

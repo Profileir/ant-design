@@ -19,7 +19,6 @@ Note: You don't need `Col` to control the width in the `compact` mode.
 
 ````jsx
 import { Input, Col, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
-
 const InputGroup = Input.Group;
 const Option = Select.Option;
 
@@ -51,7 +50,6 @@ class CompactDemo extends React.Component {
   state = {
     dataSource: [],
   }
-
   handleChange = (value) => {
     this.setState({
       dataSource: !value || value.indexOf('@') >= 0 ? [] : [
@@ -61,7 +59,6 @@ class CompactDemo extends React.Component {
       ],
     });
   }
-
   render() {
     return (
       <div>
@@ -118,8 +115,8 @@ class CompactDemo extends React.Component {
             <Option value="2">Except</Option>
           </Select>
           <Input style={{ width: 100, textAlign: 'center' }} placeholder="Minimum" />
-          <Input style={{ width: 30, borderLeft: 0, pointerEvents: 'none', backgroundColor: '#fff' }} placeholder="~" disabled />
-          <Input style={{ width: 100, textAlign: 'center', borderLeft: 0 }} placeholder="Maximum" />
+          <Input style={{ width: 30, borderRight: 0, pointerEvents: 'none', backgroundColor: '#fff' }} placeholder="~" disabled />
+          <Input style={{ width: 100, textAlign: 'center', borderRight: 0 }} placeholder="Maximum" />
         </InputGroup>
         <br />
         <InputGroup compact>
@@ -137,8 +134,8 @@ class CompactDemo extends React.Component {
         <br />
         <InputGroup compact>
           <Select style={{ width: '30%' }} defaultValue="Home">
-            <Option value="Home">Home</Option>
-            <Option value="Company">Company</Option>
+            <Option value="Home">خانه</Option>
+            <Option value="Company">کمپانی</Option>
           </Select>
           <Cascader style={{ width: '70%' }} options={options} placeholder="Select Address" />
         </InputGroup>

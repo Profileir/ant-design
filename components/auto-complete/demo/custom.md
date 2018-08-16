@@ -15,7 +15,6 @@ Customize Input Component
 
 ````jsx
 import { AutoComplete, Input } from 'antd';
-
 const { TextArea } = Input;
 
 function onSelect(value) {
@@ -51,7 +50,7 @@ class Complete extends React.Component {
         onSearch={this.handleSearch}
       >
         <TextArea
-          placeholder="input here"
+          placeholder="اینجا"
           className="custom"
           style={{ height: 50 }}
           onKeyPress={this.handleKeyPress}

@@ -16,7 +16,6 @@ Basic Usage, set datasource of autocomplete with `dataSource` property.
 
 ````jsx
 import { Icon, Button, Input, AutoComplete } from 'antd';
-
 const Option = AutoComplete.Option;
 
 function onSelect(value) {
@@ -75,7 +74,7 @@ class Complete extends React.Component {
           dataSource={dataSource.map(renderOption)}
           onSelect={onSelect}
           onSearch={this.handleSearch}
-          placeholder="input here"
+          placeholder="اینجا"
           optionLabelProp="text"
         >
           <Input
@@ -96,7 +95,7 @@ ReactDOM.render(<Complete />, mountNode);
 
 ````css
 .global-search-wrapper {
-  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .global-search {
@@ -104,24 +103,24 @@ ReactDOM.render(<Complete />, mountNode);
 }
 
 .global-search.ant-select-auto-complete .ant-select-selection--single {
-  margin-right: -46px;
+  margin-left: -46px;
 }
 
 .global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input:not(:last-child) {
-  padding-right: 62px;
+  padding-left: 62px;
 }
 
 .global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input-suffix {
-  right: 0;
+  left: 0;
 }
 
 .global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input-suffix button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .global-search-item-count {
   position: absolute;
-  right: 16px;
+  left: 16px;
 }
 ````

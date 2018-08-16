@@ -15,29 +15,27 @@ Example of creating a search box by grouping a standard input with a search butt
 
 ````jsx
 import { Input } from 'antd';
-
 const Search = Input.Search;
 
 ReactDOM.render(
   <div>
     <Search
-      placeholder="input search text"
+      placeholder="عبارت مورد نظر برای جستحو را وارد کنید"
       onSearch={value => console.log(value)}
       style={{ width: 200 }}
     />
     <br /><br />
     <Search
-      placeholder="input search text"
+      placeholder="عبارت مورد نظر برای جستحو را وارد کنید"
       onSearch={value => console.log(value)}
       enterButton
     />
     <br /><br />
     <Search
-      placeholder="input search text"
-      enterButton="Search"
+      placeholder="عبارت مورد نظر برای جستحو را وارد کنید"
+      enterButton="جستجو"
       size="large"
       onSearch={value => console.log(value)}
     />
-  </div>,
-  mountNode);
+  </div>, mountNode);
 ````

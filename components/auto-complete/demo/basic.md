@@ -43,7 +43,7 @@ class Complete extends React.Component {
         style={{ width: 200 }}
         onSelect={onSelect}
         onSearch={this.handleSearch}
-        placeholder="input here"
+        placeholder="اینجا"
       />
     );
   }

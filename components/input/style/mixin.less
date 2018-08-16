@@ -99,14 +99,14 @@
   // Undo padding and float of grid classes
   &[class*="col-"] {
     float: none;
-    padding-left: 0;
-    padding-right: 0;
+    .padding-dir(0);
+    .padding-idir(0);
   }
 
   > [class*="col-"] {
-    padding-right: 8px;
+    .padding-idir(8px);
     &:last-child {
-      padding-right: 0;
+      .padding-idir(0);
     }
   }
 
@@ -132,16 +132,16 @@
   }
 
   .@{inputClass} {
-    float: left;
+    .dir();
     width: 100%;
     margin-bottom: 0;
     &:focus {
       z-index: 1; // Fix https://gw.alipayobjects.com/zos/rmsportal/DHNpoqfMXSfrSnlZvhsJ.png
-      border-right-width: 1px;
+      .idirBorderWidth(1px);
     }
     &:hover {
       z-index: 1;
-      border-right-width: 1px;
+      .idirBorderWidth(1px);
     }
   }
 
@@ -183,8 +183,8 @@
       position: absolute;
       content: '';
       top: 0;
-      left: 0;
-      right: 0;
+      .posDir(0);
+      .posiDir(0);
       bottom: 0;
     }
   }
@@ -192,44 +192,38 @@
   // Reset rounded corners
   > .@{inputClass}:first-child,
   &-addon:first-child {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+   .idirBorderRadius(0);
 
     // Reset Select's style in addon
     .@{ant-prefix}-select .@{ant-prefix}-select-selection {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
+      .idirBorderRadius(0);
     }
   }
 
   > .@{inputClass}-affix-wrapper {
     &:not(:first-child) .@{inputClass} {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
+      .dirBorderRadius(0);
     }
 
     &:not(:last-child) .@{inputClass} {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
+      .idirBorderRadius(0);
     }
   }
 
   &-addon:first-child {
-    border-right: 0;
+    .idirBorder(0);
   }
   &-addon:last-child {
-    border-left: 0;
+    .dirBorder(0);
   }
 
   > .@{inputClass}:last-child,
   &-addon:last-child {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    .dirBorderRadius(0);
 
     // Reset Select's style in addon
     .@{ant-prefix}-select .@{ant-prefix}-select-selection {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
+      .dirBorderRadius(0);
     }
   }
 
@@ -256,7 +250,7 @@
   .@{inputClass}-affix-wrapper {
     display: table-cell;
     width: 100%;
-    float: left;
+    .dir();
   }
 
   &&-compact {
@@ -265,7 +259,7 @@
 
     & > * {
       border-radius: 0;
-      border-right-width: 0;
+      .idirBorderWidth(0);
       vertical-align: top; // https://github.com/ant-design/ant-design-pro/issues/139
       float: none;
       display: inline-block;
@@ -284,7 +278,7 @@
     & > .@{ant-prefix}-mention-wrapper .@{ant-prefix}-mention-editor,
     & > .@{ant-prefix}-time-picker .@{ant-prefix}-time-picker-input {
       border-radius: 0;
-      border-right-width: 0;
+      .idirBorderWidth(0);
     }
 
     & > *:first-child,
@@ -294,8 +288,7 @@
     & > .@{ant-prefix}-cascader-picker:first-child .@{ant-prefix}-input,
     & > .@{ant-prefix}-mention-wrapper:first-child .@{ant-prefix}-mention-editor,
     & > .@{ant-prefix}-time-picker:first-child .@{ant-prefix}-time-picker-input {
-      border-top-left-radius: @border-radius-base;
-      border-bottom-left-radius: @border-radius-base;
+      .dirBorderRadius(@border-radius-base);
     }
 
     & > *:last-child,
@@ -305,9 +298,8 @@
     & > .@{ant-prefix}-cascader-picker:last-child .@{ant-prefix}-input,
     & > .@{ant-prefix}-mention-wrapper:last-child .@{ant-prefix}-mention-editor,
     & > .@{ant-prefix}-time-picker:last-child .@{ant-prefix}-time-picker-input {
-      border-top-right-radius: @border-radius-base;
-      border-bottom-right-radius: @border-radius-base;
-      border-right-width: 1px;
+      .idirBorderRadius(@border-radius-base);
+      .idirBorderWidth(1px);
     }
   }
 }
@@ -338,18 +330,18 @@
   }
 
   .@{inputClass}-prefix {
-    left: @input-padding-horizontal-base + 1px;
+    .posDir(@input-padding-horizontal-base + 1px);
   }
 
   .@{inputClass}-suffix {
-    right: @input-padding-horizontal-base + 1px;
+    .posiDir(@input-padding-horizontal-base + 1px);
   }
 
   .@{inputClass}:not(:first-child) {
-    padding-left: @input-padding-horizontal-base + @input-affix-width;
+    .padding-dir(@input-padding-horizontal-base + @input-affix-width);
   }
 
   .@{inputClass}:not(:last-child) {
-    padding-right: @input-padding-horizontal-base + @input-affix-width;
+    .padding-idir(@input-padding-horizontal-base + @input-affix-width);
   }
 }
