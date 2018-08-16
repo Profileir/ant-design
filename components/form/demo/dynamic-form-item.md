@@ -2,7 +2,7 @@
 order: 5
 title:
   zh-CN: 动态增减表单项
-  en-US: Dynamic Form Item
+  en-US: فرم پویا
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ Add or remove form items dynamically.
 
 ````jsx
 import { Form, Input, Icon, Button } from 'antd';
-
 const FormItem = Form.Item;
 
 let uuid = 0;
@@ -81,7 +80,7 @@ class DynamicFieldSet extends React.Component {
       return (
         <FormItem
           {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-          label={index === 0 ? 'Passengers' : ''}
+          label={index === 0 ? 'مسافران' : ''}
           required={false}
           key={k}
         >
@@ -90,10 +89,10 @@ class DynamicFieldSet extends React.Component {
             rules: [{
               required: true,
               whitespace: true,
-              message: "Please input passenger's name or delete this field.",
+              message: 'لطفا نام مسافر را وارد کنید یا این فیلد را حذف کنید.',
             }],
           })(
-            <Input placeholder="passenger name" style={{ width: '60%', marginRight: 8 }} />
+            <Input placeholder="نام مسافر" style={{ width: '60%', marginLeft: 8 }} />
           )}
           {keys.length > 1 ? (
             <Icon
@@ -111,11 +110,11 @@ class DynamicFieldSet extends React.Component {
         {formItems}
         <FormItem {...formItemLayoutWithOutLabel}>
           <Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
-            <Icon type="plus" /> Add field
+            <Icon type="plus" /> اضافه کردن فیلد
           </Button>
         </FormItem>
         <FormItem {...formItemLayoutWithOutLabel}>
-          <Button type="primary" htmlType="submit">Submit</Button>
+          <Button type="primary" htmlType="submit">ارسال</Button>
         </FormItem>
       </Form>
     );

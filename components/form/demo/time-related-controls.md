@@ -2,7 +2,7 @@
 order: 6
 title:
   zh-CN: 时间类控件
-  en-US: Time-related Controls
+  en-US: کنترل‌های مربوط به زمان
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ After `antd@2.0`, the `value` of time-related components had been changed to `mo
 
 ````jsx
 import { Form, DatePicker, TimePicker, Button } from 'antd';
-
 const FormItem = Form.Item;
 const MonthPicker = DatePicker.MonthPicker;
 const RangePicker = DatePicker.RangePicker;
@@ -47,7 +46,6 @@ class TimeRelatedForm extends React.Component {
       console.log('Received values of form: ', values);
     });
   }
-
   render() {
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -61,10 +59,10 @@ class TimeRelatedForm extends React.Component {
       },
     };
     const config = {
-      rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+      rules: [{ type: 'object', required: true, message: 'لطفا زمان را انتخاب کنید!' }],
     };
     const rangeConfig = {
-      rules: [{ type: 'array', required: true, message: 'Please select time!' }],
+      rules: [{ type: 'array', required: true, message: 'لطفا زمان را انتخاب کنید!' }],
     };
     return (
       <Form onSubmit={this.handleSubmit}>
@@ -78,7 +76,7 @@ class TimeRelatedForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="DatePicker[showTime]"
+          label="انتخاب روز[نمایش زمان]"
         >
           {getFieldDecorator('date-time-picker', config)(
             <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" />
@@ -86,7 +84,7 @@ class TimeRelatedForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="MonthPicker"
+          label="انتخاب ماه"
         >
           {getFieldDecorator('month-picker', config)(
             <MonthPicker />
@@ -94,7 +92,7 @@ class TimeRelatedForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="RangePicker"
+          label="انتخاب محدوده"
         >
           {getFieldDecorator('range-picker', rangeConfig)(
             <RangePicker />
@@ -102,7 +100,7 @@ class TimeRelatedForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="RangePicker[showTime]"
+          label="انتخاب محدوده[نمایش زمان]"
         >
           {getFieldDecorator('range-time-picker', rangeConfig)(
             <RangePicker showTime format="YYYY-MM-DD HH:mm:ss" />
@@ -110,7 +108,7 @@ class TimeRelatedForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="TimePicker"
+          label="انتخاب زمان"
         >
           {getFieldDecorator('time-picker', config)(
             <TimePicker />
@@ -122,7 +120,7 @@ class TimeRelatedForm extends React.Component {
             sm: { span: 16, offset: 8 },
           }}
         >
-          <Button type="primary" htmlType="submit">Submit</Button>
+          <Button type="primary" htmlType="submit">ارسال</Button>
         </FormItem>
       </Form>
     );

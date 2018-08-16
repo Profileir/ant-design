@@ -18,7 +18,7 @@
 
 .@{form-prefix-cls}-item-required:before {
   display: inline-block;
-  margin-right: 4px;
+  .margin-idir(4px);
   content: "*";
   font-family: SimSun;
   line-height: 1;
@@ -95,7 +95,7 @@ input[type="checkbox"] {
   }
 
   &-label {
-    text-align: right;
+    .idirAlign();
     vertical-align: middle;
     line-height: @form-component-max-height - 0.0001px;
     display: inline-block;
@@ -143,7 +143,7 @@ input[type="checkbox"] {
 
 .@{form-prefix-cls}-text {
   display: inline-block;
-  padding-right: 8px;
+  .padding-idir(8px);
 }
 
 .@{form-prefix-cls}-split {
@@ -155,7 +155,7 @@ input[type="checkbox"] {
 form {
   .has-feedback {
     .@{ant-prefix}-input {
-      padding-right: 24px;
+      .padding-idir(24px);
     }
 
     // Fix overlapping between feedback icon and <Select>'s arrow.
@@ -164,26 +164,26 @@ form {
     > .@{ant-prefix}-select .@{ant-prefix}-select-selection__clear,
     :not(.@{ant-prefix}-input-group-addon) > .@{ant-prefix}-select .@{ant-prefix}-select-arrow,
     :not(.@{ant-prefix}-input-group-addon) > .@{ant-prefix}-select .@{ant-prefix}-select-selection__clear {
-      right: 28px;
+      .posiDir(28px);
     }
     > .@{ant-prefix}-select .@{ant-prefix}-select-selection-selected-value,
     :not(.@{ant-prefix}-input-group-addon) > .@{ant-prefix}-select .@{ant-prefix}-select-selection-selected-value {
-      padding-right: 42px;
+      .padding-idir(42px);
     }
 
     .@{ant-prefix}-cascader-picker {
       &-arrow {
-        margin-right: 17px;
+        .margin-idir(17px);
       }
       &-clear {
-        right: 28px;
+        .posiDir(28px);
       }
     }
 
     // Fix issue: https://github.com/ant-design/ant-design/issues/7854
     .@{ant-prefix}-input-search:not(.@{ant-prefix}-input-search-enter-button) {
       .@{ant-prefix}-input-suffix {
-        right: 28px;
+        .posiDir(28px);
       }
     }
 
@@ -192,7 +192,7 @@ form {
     .@{ant-prefix}-time-picker {
       &-icon,
       &-clear {
-        right: 28px;
+        .posiDir(28px);
       }
     }
   }
@@ -219,10 +219,10 @@ form {
     vertical-align: middle;
     font-weight: normal;
     cursor: pointer;
-    margin-left: 8px;
+    .margin-dir(8px);
 
     &:first-child {
-      margin-left: 0;
+      .margin-dir(0);
     }
   }
 
@@ -233,12 +233,12 @@ form {
 
   .@{ant-prefix}-checkbox-vertical + .@{ant-prefix}-checkbox-vertical,
   .@{ant-prefix}-radio-vertical + .@{ant-prefix}-radio-vertical {
-    margin-left: 0;
+    .margin-dir(0);
   }
 
   .@{ant-prefix}-input-number {
     + .@{form-prefix-cls}-text {
-      margin-left: 8px;
+      .margin-dir(8px);
     }
     &-handler-wrap {
       z-index: 2; // https://github.com/ant-design/ant-design/issues/6289
@@ -269,20 +269,19 @@ form {
 // Input combined with select
 .@{ant-prefix}-input-group-wrap {
   .@{ant-prefix}-select-selection {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    .dirBorderRadius(0);
     &:hover {
       border-color: @border-color-base;
     }
   }
 
   .@{ant-prefix}-select-selection--single {
-    margin-left: -1px;
+    .margin-dir(-1px);
     height: @input-height-lg;
     background-color: #eee;
     .@{ant-prefix}-select-selection__rendered {
-      padding-left: 8px;
-      padding-right: 25px;
+      .padding-dir(8px);
+      .padding-idir(25px);
       line-height: 30px;
     }
   }
@@ -299,7 +298,7 @@ form {
   padding: @form-vertical-label-padding;
   margin: @form-vertical-label-margin;
   display: block;
-  text-align: left;
+  .dirAlign();
   line-height: @line-height-base;
 
   label:after {
@@ -374,7 +373,7 @@ form {
 .@{form-prefix-cls}-inline {
   .@{form-prefix-cls}-item {
     display: inline-block;
-    margin-right: 16px;
+    .margin-idir(16px);
     margin-bottom: 0;
 
     &-with-help {
@@ -409,7 +408,7 @@ form {
   &.has-feedback .@{form-prefix-cls}-item-children:after {
     position: absolute;
     top: 50%;
-    right: 0;
+    .posiDir(0);
     visibility: visible;
     pointer-events: none;
     width: @form-component-height;

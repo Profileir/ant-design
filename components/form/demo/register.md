@@ -2,7 +2,7 @@
 order: 2
 title:
   zh-CN: 注册新用户
-  en-US: Registration
+  en-US: ثبت نام
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ Fill in this form to create a new account for you.
 
 ````jsx
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
-
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
@@ -49,7 +48,6 @@ class RegistrationForm extends React.Component {
     confirmDirty: false,
     autoCompleteResult: [],
   };
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -58,21 +56,18 @@ class RegistrationForm extends React.Component {
       }
     });
   }
-
   handleConfirmBlur = (e) => {
     const value = e.target.value;
     this.setState({ confirmDirty: this.state.confirmDirty || !!value });
   }
-
   compareToFirstPassword = (rule, value, callback) => {
     const form = this.props.form;
     if (value && value !== form.getFieldValue('password')) {
-      callback('Two passwords that you enter is inconsistent!');
+      callback('دو کلمه عبور وارد شده متفاوت هستند!');
     } else {
       callback();
     }
   }
-
   validateToNextPassword = (rule, value, callback) => {
     const form = this.props.form;
     if (value && this.state.confirmDirty) {
@@ -80,7 +75,6 @@ class RegistrationForm extends React.Component {
     }
     callback();
   }
-
   handleWebsiteChange = (value) => {
     let autoCompleteResult;
     if (!value) {
@@ -90,7 +84,6 @@ class RegistrationForm extends React.Component {
     }
     this.setState({ autoCompleteResult });
   }
-
   render() {
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
@@ -134,13 +127,13 @@ class RegistrationForm extends React.Component {
       <Form onSubmit={this.handleSubmit}>
         <FormItem
           {...formItemLayout}
-          label="E-mail"
+          label="آدرس ایمیل"
         >
           {getFieldDecorator('email', {
             rules: [{
-              type: 'email', message: 'The input is not valid E-mail!',
+              type: 'email', message: 'آدرس ایمیل وارد شده معتبر نیست!',
             }, {
-              required: true, message: 'Please input your E-mail!',
+              required: true, message: 'لطفا آدرس ایمیل خود را وارد کنید!',
             }],
           })(
             <Input />
@@ -148,11 +141,11 @@ class RegistrationForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Password"
+          label="کلمه عبور"
         >
           {getFieldDecorator('password', {
             rules: [{
-              required: true, message: 'Please input your password!',
+              required: true, message: 'لطفا کلمه عبور خود را وارد کنید!',
             }, {
               validator: this.validateToNextPassword,
             }],
@@ -162,11 +155,11 @@ class RegistrationForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Confirm Password"
+          label="تایید کلمه عبور"
         >
           {getFieldDecorator('confirm', {
             rules: [{
-              required: true, message: 'Please confirm your password!',
+              required: true, message: 'لطفا کلمه عبور خود را تایید کنید!',
             }, {
               validator: this.compareToFirstPassword,
             }],
@@ -185,15 +178,15 @@ class RegistrationForm extends React.Component {
             </span>
           )}
         >
-          {getFieldDecorator('nickname', {
-            rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+          {getFieldDecorator('نام مستعار', {
+            rules: [{ required: true, message: 'لطفا نام مستعار خود را وارد کنید!', whitespace: true }],
           })(
             <Input />
           )}
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Habitual Residence"
+          label="اقامت دائمی"
         >
           {getFieldDecorator('residence', {
             initialValue: ['zhejiang', 'hangzhou', 'xihu'],
@@ -204,25 +197,27 @@ class RegistrationForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Phone Number"
+          label="شماره تلفن"
         >
           {getFieldDecorator('phone', {
-            rules: [{ required: true, message: 'Please input your phone number!' }],
+            rules: [{ required: true, message: 'لطفا شماره تلفن خود را وارد کنید!' }],
           })(
-            <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+            <div className="ltr">
+              <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+            </div>
           )}
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Website"
+          label="وبسایت"
         >
           {getFieldDecorator('website', {
-            rules: [{ required: true, message: 'Please input website!' }],
+            rules: [{ required: true, message: 'لطفا وبسایت خود را وارد کنید!' }],
           })(
             <AutoComplete
               dataSource={websiteOptions}
               onChange={this.handleWebsiteChange}
-              placeholder="website"
+              placeholder="وبسایت"
             >
               <Input />
             </AutoComplete>
@@ -230,8 +225,8 @@ class RegistrationForm extends React.Component {
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="Captcha"
-          extra="We must make sure that your are a human."
+          label="کپچا"
+          extra="ما باید مطمئن شویم که شما یک انسان هستید."
         >
           <Row gutter={8}>
             <Col span={12}>
@@ -242,7 +237,7 @@ class RegistrationForm extends React.Component {
               )}
             </Col>
             <Col span={12}>
-              <Button>Get captcha</Button>
+              <Button>گرفتن کپچا</Button>
             </Col>
           </Row>
         </FormItem>
@@ -250,11 +245,11 @@ class RegistrationForm extends React.Component {
           {getFieldDecorator('agreement', {
             valuePropName: 'checked',
           })(
-            <Checkbox>I have read the <a href="">agreement</a></Checkbox>
+            <Checkbox>من متن <a href="">موافقت نامه</a> را خوانده‌ام.</Checkbox>
           )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
+          <Button type="primary" htmlType="submit">ثبت نام</Button>
         </FormItem>
       </Form>
     );

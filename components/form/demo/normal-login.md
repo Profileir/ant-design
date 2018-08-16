@@ -2,7 +2,7 @@
 order: 1
 title:
   zh-CN: 登录框
-  en-US: Login Form
+  en-US: فرم ورود
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ Normal login form which can contain more elements.
 
 ````jsx
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -27,23 +26,22 @@ class NormalLoginForm extends React.Component {
       }
     });
   }
-
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
           {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: 'لطفا نام کاربری خود را وارد کنید!' }],
           })(
-            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="نام کاربری" />
           )}
         </FormItem>
         <FormItem>
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: 'لطفا کلمه عبور خود را وارد کنید!' }],
           })(
-            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="کلمه عبور" />
           )}
         </FormItem>
         <FormItem>
@@ -51,13 +49,13 @@ class NormalLoginForm extends React.Component {
             valuePropName: 'checked',
             initialValue: true,
           })(
-            <Checkbox>Remember me</Checkbox>
+            <Checkbox>مرا به یاد بیاور</Checkbox>
           )}
-          <a className="login-form-forgot" href="">Forgot password</a>
+          <a className="login-form-forgot" href="">فراموشی رمز عبور</a>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Log in
+            ورود
           </Button>
-          Or <a href="">register now!</a>
+          یا <a href="">ثبت نام!</a>
         </FormItem>
       </Form>
     );
@@ -74,7 +72,7 @@ ReactDOM.render(<WrappedNormalLoginForm />, mountNode);
   max-width: 300px;
 }
 #components-form-demo-normal-login .login-form-forgot {
-  float: right;
+  float: left;
 }
 #components-form-demo-normal-login .login-form-button {
   width: 100%;

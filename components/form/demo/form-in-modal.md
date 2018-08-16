@@ -2,7 +2,7 @@
 order: 4
 title:
   zh-CN: 弹出层中的新建表单
-  en-US: Form in Modal to Create
+  en-US: فرم در مودال
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ When user visit a page with a list of items, and want to create a new item. The 
 
 ````jsx
 import { Button, Modal, Form, Input, Radio } from 'antd';
-
 const FormItem = Form.Item;
 
 const CollectionCreateForm = Form.create()(
@@ -26,20 +25,20 @@ const CollectionCreateForm = Form.create()(
       return (
         <Modal
           visible={visible}
-          title="Create a new collection"
-          okText="Create"
+          title="یک مجموعه جدید ایجاد کنید"
+          okText="ایجاد"
           onCancel={onCancel}
           onOk={onCreate}
         >
           <Form layout="vertical">
-            <FormItem label="Title">
+            <FormItem label="عنوان">
               {getFieldDecorator('title', {
-                rules: [{ required: true, message: 'Please input the title of collection!' }],
+                rules: [{ required: true, message: 'لطفا عنوان مجموعه را وارد کنید!' }],
               })(
                 <Input />
               )}
             </FormItem>
-            <FormItem label="Description">
+            <FormItem label="توضیحات">
               {getFieldDecorator('description')(<Input type="textarea" />)}
             </FormItem>
             <FormItem className="collection-create-form_last-form-item">
@@ -47,8 +46,8 @@ const CollectionCreateForm = Form.create()(
                 initialValue: 'public',
               })(
                 <Radio.Group>
-                  <Radio value="public">Public</Radio>
-                  <Radio value="private">Private</Radio>
+                  <Radio value="public">عمومی</Radio>
+                  <Radio value="private">خصوصی</Radio>
                 </Radio.Group>
               )}
             </FormItem>
@@ -63,15 +62,12 @@ class CollectionsPage extends React.Component {
   state = {
     visible: false,
   };
-
   showModal = () => {
     this.setState({ visible: true });
   }
-
   handleCancel = () => {
     this.setState({ visible: false });
   }
-
   handleCreate = () => {
     const form = this.formRef.props.form;
     form.validateFields((err, values) => {
@@ -84,15 +80,13 @@ class CollectionsPage extends React.Component {
       this.setState({ visible: false });
     });
   }
-
   saveFormRef = (formRef) => {
     this.formRef = formRef;
   }
-
   render() {
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>New Collection</Button>
+        <Button type="primary" onClick={this.showModal}>مجموعه جدید</Button>
         <CollectionCreateForm
           wrappedComponentRef={this.saveFormRef}
           visible={this.state.visible}

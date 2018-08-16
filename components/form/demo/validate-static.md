@@ -2,7 +2,7 @@
 order: 10
 title:
   zh-CN: 自定义校验
-  en-US: Customized Validation
+  en-US: سفارشی کردن ولیدیشن‌ها
 ---
 
 ## zh-CN
@@ -23,7 +23,6 @@ We provide properties like `validateStatus` `help` `hasFeedback` to customize yo
 
 ````jsx
 import { Form, Input, DatePicker, Col, TimePicker, Select, Cascader, InputNumber } from 'antd';
-
 const FormItem = Form.Item;
 const Option = Select.Option;
 
@@ -42,27 +41,27 @@ ReactDOM.render(
   <Form>
     <FormItem
       {...formItemLayout}
-      label="Fail"
+      label="ناموفق"
       validateStatus="error"
-      help="Should be combination of numbers & alphabets"
+      help="باید ترکیبی از اعداد و حروف باشد"
     >
       <Input placeholder="unavailable choice" id="error" />
     </FormItem>
 
     <FormItem
       {...formItemLayout}
-      label="Warning"
+      label="اخطار"
       validateStatus="warning"
     >
-      <Input placeholder="Warning" id="warning" />
+      <Input placeholder="اخطار" id="warning" />
     </FormItem>
 
     <FormItem
       {...formItemLayout}
-      label="Validating"
+      label="اعتبارسنجی"
       hasFeedback
       validateStatus="validating"
-      help="The information is being validated..."
+      help="اطلاعات در حال اعتبارسنجی است ..."
     >
       <Input placeholder="I'm the content is being validated" id="validating" />
     </FormItem>
@@ -165,6 +164,6 @@ ReactDOM.render(
     >
       <InputNumber style={{ width: '100%' }} />
     </FormItem>
-  </Form>,
-  mountNode);
+  </Form>
+, mountNode);
 ````

@@ -2,7 +2,7 @@
 order: 3
 title:
   zh-CN: 高级搜索
-  en-US: Advanced search
+  en-US: جستجوی پیشرفته
 ---
 
 ## zh-CN
@@ -20,7 +20,6 @@ Because the width of label is not fixed, you may need to adjust it by customizin
 
 ````jsx
 import { Form, Row, Col, Input, Button, Icon } from 'antd';
-
 const FormItem = Form.Item;
 
 class AdvancedSearchForm extends React.Component {
@@ -56,7 +55,7 @@ class AdvancedSearchForm extends React.Component {
             {getFieldDecorator(`field-${i}`, {
               rules: [{
                 required: true,
-                message: 'Input something!',
+                message: 'چیزی وارد کنید!',
               }],
             })(
               <Input placeholder="placeholder" />
@@ -77,12 +76,12 @@ class AdvancedSearchForm extends React.Component {
         <Row gutter={24}>{this.getFields()}</Row>
         <Row>
           <Col span={24} style={{ textAlign: 'right' }}>
-            <Button type="primary" htmlType="submit">Search</Button>
-            <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
-              Clear
+            <Button type="primary" htmlType="submit">جستجو</Button>
+            <Button style={{ marginRight: 8 }} onClick={this.handleReset}>
+              پاک کردن
             </Button>
-            <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-              Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
+            <a style={{ marginRight: 8, fontSize: 12 }} onClick={this.toggle}>
+              جمع کردن <Icon type={this.state.expand ? 'up' : 'down'} />
             </a>
           </Col>
         </Row>
@@ -95,7 +94,7 @@ const WrappedAdvancedSearchForm = Form.create()(AdvancedSearchForm);
 ReactDOM.render(
   <div>
     <WrappedAdvancedSearchForm />
-    <div className="search-result-list">Search Result List</div>
+    <div className="search-result-list">لیست نتایج جستجو</div>
   </div>,
   mountNode
 );

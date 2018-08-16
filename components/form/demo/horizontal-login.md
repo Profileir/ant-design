@@ -2,7 +2,7 @@
 order: 0
 title:
   zh-CN: 水平登录栏
-  en-US: Horizontal Login Form
+  en-US: فرم ورود افقی
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ Horizontal login form is often used in navigation bar.
 
 ````jsx
 import { Form, Icon, Input, Button } from 'antd';
-
 const FormItem = Form.Item;
 
 function hasErrors(fieldsError) {
@@ -27,7 +26,6 @@ class HorizontalLoginForm extends React.Component {
     // To disabled submit button at the beginning.
     this.props.form.validateFields();
   }
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -36,7 +34,6 @@ class HorizontalLoginForm extends React.Component {
       }
     });
   }
-
   render() {
     const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
 
@@ -50,9 +47,9 @@ class HorizontalLoginForm extends React.Component {
           help={userNameError || ''}
         >
           {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: 'لطفا نام کاربری خود را وارد کنید!' }],
           })(
-            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="نام کاربری" />
           )}
         </FormItem>
         <FormItem
@@ -60,9 +57,9 @@ class HorizontalLoginForm extends React.Component {
           help={passwordError || ''}
         >
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: 'لطفا کلمه عبور خود را وارد کنید!' }],
           })(
-            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="کلمه عبور" />
           )}
         </FormItem>
         <FormItem>
@@ -71,7 +68,7 @@ class HorizontalLoginForm extends React.Component {
             htmlType="submit"
             disabled={hasErrors(getFieldsError())}
           >
-            Log in
+            ورود
           </Button>
         </FormItem>
       </Form>
