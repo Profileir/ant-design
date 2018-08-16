@@ -45,6 +45,8 @@
   .DraftEditor-editorContainer .public-DraftEditor-content {
     height: auto;
     padding: 5px @control-padding-horizontal - 1px;
+    direction: ltr;
+    text-align: left;
   }
 }
 
@@ -57,7 +59,7 @@
   box-shadow: @box-shadow-base;
   border-radius: @border-radius-base;
   z-index: @zindex-dropdown;
-  left: -9999px;
+  .posDir(-9999px);
   top: -9999px;
   position: absolute;
   outline: none;
