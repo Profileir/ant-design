@@ -23,8 +23,8 @@
   &-inner {
     color: #fff;
     font-size: @font-size-sm;
-    margin-left: 24px;
-    margin-right: 6px;
+    .margin-dir(24px);
+    .margin-idir(6px);
     display: block;
   }
 
@@ -33,7 +33,7 @@
     position: absolute;
     width: @switch-height - 4px;
     height: @switch-height - 4px;
-    left: 1px;
+    left: 0;
     top: 1px;
     border-radius: 18px;
     background-color: @component-background;
@@ -86,8 +86,8 @@
     line-height: @switch-sm-height - 2px;
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 18px;
-      margin-right: 3px;
+      .margin-dir(18px);
+      .margin-idir(3px);
       font-size: @font-size-sm;
     }
 
@@ -105,12 +105,12 @@
 
   &-small&-checked {
     &:before {
-      left: 100%;
-      margin-left: @switch-sm-checked-margin-left;
+      .posDir(100%);
+      .margin-dir(@switch-sm-checked-margin-left);
     }
     .@{switch-prefix-cls}-inner {
-      margin-left: 3px;
-      margin-right: 18px;
+      .margin-dir(3px);
+      .margin-idir(18px);
     }
   }
 
@@ -123,19 +123,21 @@
     background-color: @switch-color;
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 6px;
-      margin-right: 24px;
+      .margin-dir(6px);
+      .margin-idir(24px);
     }
 
     &:before {
+      //.posDir(100%);
       left: 100%;
-      margin-left: -19px;
+      .margin-dir(-19px);
     }
 
     &:after {
+      // .posDir(100%);
       left: 100%;
       transform: translateX(-100%);
-      margin-left: -1px;
+      .margin-dir(-1px);
     }
   }
 
