@@ -21,8 +21,10 @@ class App extends React.Component {
     checked: true,
     disabled: false,
   };
+
   render() {
     const label = `${this.state.checked ? 'Checked' : 'Unchecked'}-${this.state.disabled ? 'Disabled' : 'Enabled'}`;
+
     return (
       <div>
         <p style={{ marginBottom: '20px' }}>
