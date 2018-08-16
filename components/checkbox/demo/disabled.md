@@ -2,7 +2,7 @@
 order: 1
 title:
     zh-CN: 不可用
-    en-US: Disabled
+    en-US: غیرفعال
 ---
 
 ## zh-CN
@@ -21,6 +21,5 @@ ReactDOM.render(
     <Checkbox defaultChecked={false} disabled />
     <br />
     <Checkbox defaultChecked disabled />
-  </div>,
-  mountNode);
+  </div>, mountNode);
 ````

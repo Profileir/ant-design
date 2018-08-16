@@ -29,7 +29,5 @@ ReactDOM.render(
       <Col span={8}><Checkbox value="D">D</Checkbox></Col>
       <Col span={8}><Checkbox value="E">E</Checkbox></Col>
     </Row>
-  </Checkbox.Group>,
-  mountNode
-);
+  </Checkbox.Group>, mountNode);
 ````

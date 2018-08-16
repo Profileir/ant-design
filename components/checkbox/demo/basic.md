@@ -2,7 +2,7 @@
 order: 0
 title:
     zh-CN: 基本用法
-    en-US: Basic
+    en-US: اصلی
 ---
 
 ## zh-CN
@@ -21,6 +21,5 @@ function onChange(e) {
 }
 
 ReactDOM.render(
-  <Checkbox onChange={onChange}>Checkbox</Checkbox>,
-  mountNode);
+  <Checkbox onChange={onChange}>چک باکس</Checkbox>, mountNode);
 ````

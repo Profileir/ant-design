@@ -15,7 +15,6 @@ The `indeterminate` property can help you to achieve a 'check all' effect.
 
 ````jsx
 import { Checkbox } from 'antd';
-
 const CheckboxGroup = Checkbox.Group;
 
 const plainOptions = ['Apple', 'Pear', 'Orange'];
@@ -37,7 +36,7 @@ class App extends React.Component {
             onChange={this.onCheckAllChange}
             checked={this.state.checkAll}
           >
-            Check all
+            علامت زدن همه
           </Checkbox>
         </div>
         <br />

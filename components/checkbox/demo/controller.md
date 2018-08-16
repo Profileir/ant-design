@@ -21,7 +21,6 @@ class App extends React.Component {
     checked: true,
     disabled: false,
   };
-
   render() {
     const label = `${this.state.checked ? 'Checked' : 'Unchecked'}-${this.state.disabled ? 'Disabled' : 'Enabled'}`;
     return (
@@ -44,7 +43,7 @@ class App extends React.Component {
             {!this.state.checked ? 'Check' : 'Uncheck'}
           </Button>
           <Button
-            style={{ marginLeft: '10px' }}
+            style={{ marginRight: '10px' }}
             type="primary"
             size="small"
             onClick={this.toggleDisable}
