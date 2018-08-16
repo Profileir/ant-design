@@ -35,14 +35,17 @@ class App extends React.Component {
       current: 0,
     };
   }
+
   next() {
     const current = this.state.current + 1;
     this.setState({ current });
   }
+
   prev() {
     const current = this.state.current - 1;
     this.setState({ current });
   }
+
   render() {
     const { current } = this.state;
     return (
