@@ -166,3 +166,11 @@
 .letter-spacing(@value) when not(@dir="ltr") {
   letter-spacing: 0;
 }
+
+//Transform Translate
+.translateX (@value) when (@dir="ltr") {
+  transform: translateX(@value);
+}
+.translateX (@value) when not (@dir="ltr") {
+  transform: translateX(-(@value));
+}

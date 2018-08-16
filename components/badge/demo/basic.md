@@ -2,7 +2,7 @@
 order: 0
 title:
   zh-CN: 基本
-  en-US: Basic
+  en-US: اصلی
 ---
 
 ## zh-CN
@@ -24,13 +24,13 @@ ReactDOM.render(
     <Badge count={0} showZero>
       <a href="#" className="head-example" />
     </Badge>
-  </div>,
-  mountNode);
+  </div>
+, mountNode);
 ````
 
 <style>
 .ant-badge:not(.ant-badge-status) {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .head-example {
   width: 42px;

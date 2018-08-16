@@ -37,7 +37,7 @@
     cursor: pointer;
     transition: border-color 0.3s ease;
     vertical-align: top;
-    margin-right: 8px;
+    .margin-idir(8px);
     margin-bottom: 8px;
     display: table;
 
@@ -131,14 +131,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      padding-left: @font-size-base + 8px;
+      .padding-dir(@font-size-base + 8px);
       width: 100%;
       display: inline-block;
     }
 
     &-info {
       height: 100%;
-      padding: 0 12px 0 4px;
+      .padding(0; 12px; 0; 4px);
       transition: background-color .3s;
 
       > span {
@@ -161,7 +161,7 @@
       cursor: pointer;
       position: absolute;
       top: 0;
-      right: 4px;
+      .posiDir(4px);
       color: @text-color-secondary;
       line-height: 22px;
       &:hover {
@@ -194,7 +194,7 @@
       position: absolute;
       width: 100%;
       bottom: -12px;
-      padding-left: @font-size-base + 12px;
+      .padding-dir(@font-size-base + 12px);
     }
   }
 
@@ -231,7 +231,7 @@
       height: 48px;
       position: absolute;
       top: 8px;
-      left: 8px;
+      .posDir(8px);
       text-align: center;
     }
 
@@ -240,9 +240,9 @@
       font-size: 36px;
       position: absolute;
       top: 50%;
-      left: 50%;
+      .posDir(50%);
       margin-top: -18px;
-      margin-left: -18px;
+      .margin-dir(-18px);
     }
 
     .@{upload-item}-thumbnail img {
@@ -262,11 +262,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      margin: 0 0 0 8px;
+      .margin(0; 0; 0; 8px);
       line-height: 44px;
       transition: all .3s;
-      padding-left: 48px;
-      padding-right: 8px;
+      .padding-dir(48px);
+      .padding-idir(8px);
       max-width: 100%;
       display: inline-block;
       box-sizing: border-box;
@@ -277,7 +277,7 @@
     }
 
     .@{upload-item}-progress {
-      padding-left: 56px;
+      .padding-dir(56px);
       margin-top: 0;
       bottom: 14px;
       width: ~"calc(100% - 24px)";
@@ -285,7 +285,7 @@
 
     .@{iconfont-css-prefix}-cross {
       position: absolute;
-      right: 8px;
+      .posiDir(8px);
       top: 8px;
       line-height: 1;
       opacity: 1;
@@ -297,10 +297,10 @@
       display: none;
     }
     .@{upload-item} {
-      float: left;
+      .dir();
       width: @upload-pictrue-card-size;
       height: @upload-pictrue-card-size;
-      margin: 0 8px 8px 0;
+      .margin(0; 8px; 8px; 0);
     }
 
     .@{upload-item}-info {
@@ -395,7 +395,7 @@
     }
 
     .@{upload-item}-progress {
-      padding-left: 0;
+      .padding-dir(0);
       bottom: 32px;
     }
   }

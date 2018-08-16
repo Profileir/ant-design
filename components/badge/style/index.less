@@ -14,7 +14,7 @@
 
   &-count {
     position: absolute;
-    transform: translateX(-50%);
+    .translateX(-50%);
     top: -@badge-height / 2;
     height: @badge-height;
     border-radius: @badge-height / 2;
@@ -41,7 +41,7 @@
 
   &-dot {
     position: absolute;
-    transform: translateX(-50%);
+    .translateX(-50%);
     transform-origin: 0 center;
     top: -@badge-dot-size / 2;
     height: @badge-dot-size;
@@ -74,7 +74,7 @@
       &:after {
         position: absolute;
         top: 0;
-        left: 0;
+        .posDir(0);
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -95,7 +95,7 @@
     &-text {
       color: @text-color;
       font-size: @font-size-base;
-      margin-left: 8px;
+      .margin-dir(8px);
     }
   }
 
@@ -144,6 +144,8 @@
     }
   }
 }
+
+//@x: if(@dir="ltr"; -50%; 50%);
 
 @keyframes antZoomBadgeIn {
   0% {

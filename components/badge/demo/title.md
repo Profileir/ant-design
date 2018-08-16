@@ -2,7 +2,7 @@
 order: 7
 title:
   zh-CN: 自定义标题
-  en-US: Title
+  en-US: عنوان
 ---
 
 ## zh-CN
@@ -21,8 +21,8 @@ ReactDOM.render(
     <Badge count={5} title="Custom hover text">
       <a href="#" className="head-example" />
     </Badge>
-  </div>,
-  mountNode);
+  </div>
+, mountNode);
 ````
 
 <style>

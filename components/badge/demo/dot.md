@@ -26,10 +26,10 @@ ReactDOM.render(
       <Icon type="notification" />
     </Badge>
     <Badge dot>
-      <a href="#">Link something</a>
+      <a href="#">نشان قرمز</a>
     </Badge>
-  </div>,
-  mountNode);
+  </div>
+, mountNode);
 ````
 
 <style>
