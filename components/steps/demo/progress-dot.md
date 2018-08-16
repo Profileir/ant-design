@@ -15,14 +15,12 @@ Steps with progress dot style.
 
 ````jsx
 import { Steps } from 'antd';
-
 const Step = Steps.Step;
 
 ReactDOM.render(
   <Steps progressDot current={1}>
-    <Step title="Finished" description="This is a description." />
-    <Step title="In Progress" description="This is a description." />
-    <Step title="Waiting" description="This is a description." />
-  </Steps>,
-  mountNode);
+    <Step title="تمام شده" description="توضیح." />
+    <Step title="در حال بررسی" description="توضیح." />
+    <Step title="صبر کنید" description="توضیح." />
+  </Steps>, mountNode);
 ````

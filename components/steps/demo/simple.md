@@ -2,7 +2,7 @@
 order: 0
 title:
   zh-CN: 基本用法
-  en-US: Basic
+  en-US: اولیه
 ---
 
 ## zh-CN
@@ -15,14 +15,12 @@ The most basic step bar.
 
 ````jsx
 import { Steps } from 'antd';
-
 const Step = Steps.Step;
 
 ReactDOM.render(
   <Steps current={1}>
-    <Step title="Finished" description="This is a description." />
-    <Step title="In Progress" description="This is a description." />
-    <Step title="Waiting" description="This is a description." />
-  </Steps>,
-  mountNode);
+    <Step title="تمام شده" description="توضیح." />
+    <Step title="در حال بررسی" description="توضیح." />
+    <Step title="صبر کنید" description="توضیح." />
+  </Steps>, mountNode);
 ````

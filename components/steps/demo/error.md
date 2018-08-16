@@ -2,7 +2,7 @@
 order: 6
 title:
   zh-CN: 步骤运行错误
-  en-US: Error status
+  en-US: وضعیت ارور
 ---
 
 ## zh-CN
@@ -15,14 +15,12 @@ By using `status` of `Steps`, you can specify the state for current step.
 
 ````jsx
 import { Steps } from 'antd';
-
 const Step = Steps.Step;
 
 ReactDOM.render(
   <Steps current={1} status="error">
-    <Step title="Finished" description="This is a description" />
-    <Step title="In Process" description="This is a description" />
-    <Step title="Waiting" description="This is a description" />
-  </Steps>,
-  mountNode);
+    <Step title="تمام شده" description="توضیح." />
+    <Step title="در حال بررسی" description="توضیح." />
+    <Step title="صبر کنید" description="توضیح." />
+  </Steps>, mountNode);
 ````

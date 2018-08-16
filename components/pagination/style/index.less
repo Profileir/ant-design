@@ -28,7 +28,7 @@
     vertical-align: middle;
     height: @pagination-item-size;
     line-height: @pagination-item-size - 2px;
-    margin-right: 8px;
+    .margin-idir(8px);
   }
 
   &-item {
@@ -44,10 +44,10 @@
     vertical-align: middle;
     border: @border-width-base @border-style-base @border-color-base;
     background-color: @component-background;
-    margin-right: 8px;
+    .margin-idir(8px);
     font-family: @pagination-font-family;
     outline: 0;
-
+    padding: 0;
     a {
       text-decoration: none;
       color: @text-color;
@@ -128,7 +128,7 @@
   &-prev,
   &-jump-prev,
   &-jump-next {
-    margin-right: 8px;
+    .margin-idir(8px);
   }
   &-prev,
   &-next,
@@ -215,17 +215,17 @@
   }
 
   &-slash {
-    margin: 0 10px 0 5px;
+    .margin(0; 10px; 0; 5px);
   }
 
   &-options {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 16px;
+    .margin-dir(16px);
 
     &-size-changer.@{ant-prefix}-select {
       display: inline-block;
-      margin-right: 8px;
+      .margin-idir(8px);
     }
 
     &-quick-jumper {
@@ -259,11 +259,11 @@
 
   &-simple &-simple-pager {
     display: inline-block;
-    margin-right: 8px;
+    .margin-idir(8px);
     height: @pagination-item-size-sm;
 
     input {
-      margin-right: 8px;
+      .margin-idir(8px);
       box-sizing: border-box;
       background-color: @component-background;
       border-radius: @border-radius-base;
@@ -320,11 +320,11 @@
   &.mini &-jump-next {
     height: @pagination-item-size-sm;
     line-height: @pagination-item-size-sm;
-    margin-right: 0;
+    .margin-idir(0);
   }
 
   &.mini &-options {
-    margin-left: 2px;
+    .margin-dir(2px);
     &-quick-jumper {
       height: @pagination-item-size-sm;
       line-height: @pagination-item-size-sm;

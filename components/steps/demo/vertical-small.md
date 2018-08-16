@@ -2,7 +2,7 @@
 order: 5
 title:
   zh-CN: 竖直方向的小型步骤条
-  en-US: Vertical mini version
+  en-US: عمودی ورژن کوچک
 ---
 
 ## zh-CN
@@ -15,14 +15,12 @@ A simple mini version step bar in the vertical direction.
 
 ````jsx
 import { Steps } from 'antd';
-
 const Step = Steps.Step;
 
 ReactDOM.render(
   <Steps direction="vertical" size="small" current={1}>
-    <Step title="Finished" description="This is a description." />
-    <Step title="In Progress" description="This is a description." />
-    <Step title="Waiting" description="This is a description." />
-  </Steps>,
-  mountNode);
+    <Step title="تمام شده" description="توضیح." />
+    <Step title="در حال بررسی" description="توضیح." />
+    <Step title="صبر کنید" description="توضیح." />
+  </Steps>, mountNode);
 ````

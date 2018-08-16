@@ -2,7 +2,7 @@
 order: 3
 title:
   zh-CN: 步骤切换
-  en-US: Switch Step
+  en-US: تغییر استپ
 ---
 
 ## zh-CN
@@ -15,17 +15,16 @@ Cooperate with the content and buttons, to represent the progress of a process.
 
 ````jsx
 import { Steps, Button, message } from 'antd';
-
 const Step = Steps.Step;
 
 const steps = [{
-  title: 'First',
+  title: 'اولین',
   content: 'First-content',
 }, {
-  title: 'Second',
+  title: 'دومین',
   content: 'Second-content',
 }, {
-  title: 'Last',
+  title: 'آخرین',
   content: 'Last-content',
 }];
 
@@ -36,17 +35,14 @@ class App extends React.Component {
       current: 0,
     };
   }
-
   next() {
     const current = this.state.current + 1;
     this.setState({ current });
   }
-
   prev() {
     const current = this.state.current - 1;
     this.setState({ current });
   }
-
   render() {
     const { current } = this.state;
     return (
@@ -54,23 +50,16 @@ class App extends React.Component {
         <Steps current={current}>
           {steps.map(item => <Step key={item.title} title={item.title} />)}
         </Steps>
-        <div className="steps-content">{steps[current].content}</div>
+        <div className="steps-content">{steps[this.state.current].content}</div>
         <div className="steps-action">
           {
-            current < steps.length - 1
-            && <Button type="primary" onClick={() => this.next()}>Next</Button>
+            this.state.current < steps.length - 1 && <Button type="primary" onClick={() => this.next()}>بعدی</Button>
           }
           {
-            current === steps.length - 1
-            && <Button type="primary" onClick={() => message.success('Processing complete!')}>Done</Button>
+            this.state.current === steps.length - 1 && <Button type="primary" onClick={() => message.success('Processing complete!')}>انجام شد</Button>
           }
           {
-            current > 0
-            && (
-            <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-              Previous
-            </Button>
-            )
+            this.state.current > 0 && (<Button style={{ marginRight: 8 }} onClick={() => this.prev()}>قبلی</Button>)
           }
         </div>
       </div>

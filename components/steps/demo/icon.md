@@ -2,7 +2,7 @@
 order: 2
 title:
   zh-CN: 带图标的步骤条
-  en-US: With icon
+  en-US: همراه آیکون
 ---
 
 ## zh-CN
@@ -15,15 +15,13 @@ You can use your own custom icons by setting the property `icon` for `Steps.Step
 
 ````jsx
 import { Steps, Icon } from 'antd';
-
 const Step = Steps.Step;
 
 ReactDOM.render(
   <Steps>
-    <Step status="finish" title="Login" icon={<Icon type="user" />} />
-    <Step status="finish" title="Verification" icon={<Icon type="solution" />} />
-    <Step status="process" title="Pay" icon={<Icon type="loading" />} />
-    <Step status="wait" title="Done" icon={<Icon type="smile-o" />} />
-  </Steps>,
-  mountNode);
+    <Step status="finish" title="ورود" icon={<Icon type="user" />} />
+    <Step status="finish" title="تایید" icon={<Icon type="solution" />} />
+    <Step status="process" title="پرداخت" icon={<Icon type="loading" />} />
+    <Step status="wait" title="انجام شد" icon={<Icon type="smile-o" />} />
+  </Steps>, mountNode);
 ````

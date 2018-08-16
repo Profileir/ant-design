@@ -2,7 +2,7 @@
 order: 9
 title:
   zh-CN: 自定义点状步骤条
-  en-US: Customized Dot Style
+  en-US: شخصی سازی کردن استایل دات‌ها
 ---
 
 ## zh-CN
@@ -15,7 +15,6 @@ You can customize the display for Steps with progress dot style.
 
 ````jsx
 import { Steps, Popover } from 'antd';
-
 const Step = Steps.Step;
 
 const customDot = (dot, { status, index }) => (
@@ -26,10 +25,9 @@ const customDot = (dot, { status, index }) => (
 
 ReactDOM.render(
   <Steps current={1} progressDot={customDot}>
-    <Step title="Finished" description="You can hover on the dot." />
-    <Step title="In Progress" description="You can hover on the dot." />
-    <Step title="Waiting" description="You can hover on the dot." />
-    <Step title="Waiting" description="You can hover on the dot." />
-  </Steps>,
-  mountNode);
+    <Step title="تمام شده" description="هاور کنید." />
+    <Step title="در حال بررسی" description="هاور کنید." />
+    <Step title="صبر کنید" description="هاور کنید." />
+    <Step title="صبر کنید" description="هاور کنید." />
+  </Steps>, mountNode);
 ````
