@@ -174,3 +174,11 @@
 .translateX (@value) when not (@dir="ltr") {
   transform: translateX(-(@value));
 }
+
+//Transform Translate
+.translateY (@value) when (@dir="ltr") {
+  transform: translateY(@value);
+}
+.translateY (@value) when not (@dir="ltr") {
+  transform: translateY(-(@value));
+}
