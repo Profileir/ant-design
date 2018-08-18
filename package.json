@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "array-tree-filter": "^2.0.0",
+    "async": "^2.6.1",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
     "create-react-class": "^15.6.0",
@@ -77,8 +78,8 @@
     "rc-tabs": "~9.3.3",
     "rc-time-picker": "~3.3.0",
     "rc-tooltip": "~3.7.0",
-    "rc-tree": "~1.13.0",
-    "rc-tree-select": "~2.0.5",
+    "rc-tree": "^1.13.3",
+    "rc-tree-select": "^2.0.14",
     "rc-trigger": "^2.5.4",
     "rc-upload": "~2.5.0",
     "rc-util": "^4.0.4",
@@ -86,7 +87,7 @@
     "react-lifecycles-compat": "^3.0.2",
     "react-slick": "~0.23.1",
     "shallowequal": "^1.0.1",
-    "warning": "~4.0.1"
+    "warning": "^4.0.2"
   },
   "devDependencies": {
     "@babel/types": "7.0.0-beta.44",
