@@ -3267,18 +3267,18 @@ mark {
   padding: 0;
   list-style: none;
   position: relative;
-  padding-right: 2px;
+  padding-left: 2px;
 }
 .ant-anchor-wrapper {
   background-color: #fff;
   overflow: auto;
-  padding-right: 4px;
-  margin-right: -4px;
+  padding-left: 4px;
+  margin-left: -4px;
 }
 .ant-anchor-ink {
   position: absolute;
   height: 100%;
-  right: 0;
+  left: 0;
   top: 0;
 }
 .ant-anchor-ink:before {
@@ -3298,12 +3298,12 @@ mark {
   border-radius: 8px;
   border: 2px solid #1890ff;
   background-color: #fff;
-  right: 50%;
+  left: 50%;
   -webkit-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
-  -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .ant-anchor-ink-ball.visible {
   display: inline-block;
@@ -3312,7 +3312,7 @@ mark {
   display: none;
 }
 .ant-anchor-link {
-  padding: 8px 16px 8px 0;
+  padding: 8px 0 8px 16px;
   line-height: 1;
 }
 .ant-anchor-link-title {
