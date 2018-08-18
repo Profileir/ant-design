@@ -1,7 +1,7 @@
 ---
 order: 7
 title:
-  en-US: Filter and sorter
+  en-US: تنظیم فیلترها و انتخابگرها
   zh-CN: 筛选和排序
 ---
 
@@ -27,7 +27,7 @@ If a `sortOrder` or `defaultSortOrder` is specified with the value `ascend` or `
 import { Table } from 'antd';
 
 const columns = [{
-  title: 'Name',
+  title: 'نام',
   dataIndex: 'name',
   filters: [{
     text: 'Joe',
@@ -51,12 +51,12 @@ const columns = [{
   onFilter: (value, record) => record.name.indexOf(value) === 0,
   sorter: (a, b) => a.name.length - b.name.length,
 }, {
-  title: 'Age',
+  title: 'سن',
   dataIndex: 'age',
   defaultSortOrder: 'descend',
   sorter: (a, b) => a.age - b.age,
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
   filters: [{
     text: 'London',
@@ -97,6 +97,5 @@ function onChange(pagination, filters, sorter) {
 }
 
 ReactDOM.render(
-  <Table columns={columns} dataSource={data} onChange={onChange} />,
-  mountNode);
+  <Table columns={columns} dataSource={data} onChange={onChange} />, mountNode);
 ````

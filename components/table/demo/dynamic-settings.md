@@ -1,5 +1,5 @@
 ---
-order: 27
+order: 26
 title:
   en-US: Dynamic Settings
   zh-CN: 动态控制表格属性
@@ -15,26 +15,25 @@ Select different settings to see the result.
 
 ````jsx
 import { Table, Icon, Switch, Radio, Form, Divider } from 'antd';
-
 const FormItem = Form.Item;
 
 const columns = [{
-  title: 'Name',
+  title: 'نام',
   dataIndex: 'name',
   key: 'name',
   width: 150,
   render: text => <a href="javascript:;">{text}</a>,
 }, {
-  title: 'Age',
+  title: 'سن',
   dataIndex: 'age',
   key: 'age',
   width: 70,
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
   key: 'address',
 }, {
-  title: 'Action',
+  title: 'عملیات',
   key: 'action',
   width: 360,
   render: (text, record) => (

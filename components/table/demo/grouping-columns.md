@@ -75,7 +75,7 @@ const columns = [{
   title: 'Gender',
   dataIndex: 'gender',
   key: 'gender',
-  width: 80,
+  width: 60,
   fixed: 'right',
 }];
 
@@ -101,6 +101,5 @@ ReactDOM.render(
     bordered
     size="middle"
     scroll={{ x: '130%', y: 240 }}
-  />,
-  mountNode);
+  />, mountNode);
 ```

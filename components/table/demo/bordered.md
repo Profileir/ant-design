@@ -53,8 +53,7 @@ ReactDOM.render(
     bordered
     title={() => 'Header'}
     footer={() => 'Footer'}
-  />,
-  mountNode);
+  />, mountNode);
 ````
 
 ````css

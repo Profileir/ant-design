@@ -25,14 +25,14 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    text-align: left;
+    .dirAlign();
     border-radius: @border-radius-base @border-radius-base 0 0;
   }
 
   &-thead > tr > th {
     background: @table-header-bg;
     transition: background .3s ease;
-    text-align: left;
+    .dirAlign();
     color: @heading-color;
     font-weight: 500;
     border-bottom: @border-width-base @border-style-base @border-color-split;
@@ -44,7 +44,7 @@
     .@{iconfont-css-prefix}-filter,
     .@{table-prefix-cls}-filter-icon {
       position: relative;
-      margin-left: 8px;
+      .margin-dir(8px);
       font-size: @font-size-base;
       cursor: pointer;
       color: @table-header-icon-color;
@@ -59,7 +59,7 @@
     }
 
     .@{table-prefix-cls}-column-sorter + .@{iconfont-css-prefix}-filter {
-      margin-left: 4px;
+      .margin-dir(4px);
     }
 
     .@{table-prefix-cls}-filter-selected.@{iconfont-css-prefix}-filter {
@@ -121,7 +121,7 @@
       position: absolute;
       top: -1px;
       width: 100%;
-      left: 0;
+      .posDir(0);
     }
   }
 
@@ -138,8 +138,8 @@
 
   &.@{table-prefix-cls}-bordered &-title {
     border: @border-width-base @border-style-base @border-color-split;
-    padding-left: @table-padding-horizontal;
-    padding-right: @table-padding-horizontal;
+    .padding-dir(@table-padding-horizontal);
+    .padding-idir(@table-padding-horizontal);
   }
 
   &-title + &-content {
@@ -177,8 +177,8 @@
   }
 
   &-thead > tr > th.@{table-prefix-cls}-selection-column-custom {
-    padding-left: 16px;
-    padding-right: 0;
+    .padding-dir(16px);
+    .padding-idir(0);
   }
 
   &-thead > tr > th.@{table-prefix-cls}-selection-column,
@@ -187,7 +187,7 @@
     min-width: 62px;
     width: 62px;
     .@{ant-prefix}-radio-wrapper {
-      margin-right: 0;
+      .margin-idir(0);
     }
   }
 
@@ -216,9 +216,9 @@
     .@{table-prefix-cls}-spin-holder {
       height: 20px;
       line-height: 20px;
-      left: 50%;
+      .posDir(50%);
       top: 50%;
-      margin-left: -30px;
+      .margin-dir(-30px);
       position: absolute;
     }
     .@{table-prefix-cls}-with-pagination {
@@ -231,7 +231,7 @@
 
   &-column-sorter {
     position: relative;
-    margin-left: 8px;
+    .margin-dir(8px);
     display: inline-block;
     width: 14px;
     height: @font-size-base;
@@ -263,7 +263,7 @@
         content: '';
         height: 30px;
         width: 14px;
-        left: 0;
+        .posDir(0);
       }
     }
 
@@ -300,14 +300,14 @@
     .@{table-prefix-cls}-fixed-left table,
     .@{table-prefix-cls}-fixed-right table {
       border: @border-width-base @border-style-base @border-color-split;
-      border-right: 0;
+      .idirBorder(0);
       border-bottom: 0;
     }
 
     &.@{table-prefix-cls}-empty {
       .@{table-prefix-cls}-placeholder {
-        border-left: @border-width-base @border-style-base @border-color-split;
-        border-right: @border-width-base @border-style-base @border-color-split;
+        .dirBorder(@border-width-base @border-style-base @border-color-split);
+        .idirBorder(@border-width-base @border-style-base @border-color-split);
       }
     }
 
@@ -337,7 +337,7 @@
 
     .@{table-prefix-cls}-thead > tr > th,
     .@{table-prefix-cls}-tbody > tr > td {
-      border-right: @border-width-base @border-style-base @border-color-split;
+      .idirBorder(@border-width-base @border-style-base @border-color-split);
     }
   }
 
@@ -351,18 +351,18 @@
     color: @text-color-secondary;
     z-index: 1;
     .@{iconfont-css-prefix} {
-      margin-right: 4px;
+      .margin-idir(4px);
     }
   }
 
   &-pagination.@{ant-prefix}-pagination {
     margin: 16px 0;
-    float: right;
+    .idir();
   }
 
   &-filter-dropdown {
     min-width: 96px;
-    margin-left: -8px;
+    .margin-dir(-8px);
     background: @component-background;
     border-radius: @border-radius-base;
     box-shadow: @box-shadow-base;
@@ -379,7 +379,7 @@
       }
 
       &-item > label + span {
-        padding-right: 0;
+        .padding-idir(0);
       }
 
       &-sub {
@@ -420,17 +420,17 @@
         color: @link-active-color;
       }
       &.confirm {
-        float: left;
+        .dir();
       }
       &.clear {
-        float: right;
+        .idir();
       }
     }
   }
 
   &-selection {
     &-select-all-custom {
-      margin-right: 4px !important;
+      .margin-idir(~"4px !important");
     }
 
     .@{iconfont-css-prefix}-down {
@@ -441,7 +441,7 @@
     &-menu {
       min-width: 96px;
       margin-top: 5px;
-      margin-left: -30px;
+      .margin-dir(-30px);
       background: @component-background;
       border-radius: @border-radius-base;
       box-shadow: @box-shadow-base;
@@ -503,7 +503,7 @@
   }
 
   .@{table-prefix-cls}-row-indent + .@{table-prefix-cls}-row-expand-icon {
-    margin-right: 8px;
+    .margin-idir(8px);
   }
 
   &-scroll {
@@ -553,18 +553,18 @@
   }
 
   &-fixed-left {
-    left: 0;
+    .posDir(0);
     box-shadow: 6px 0 6px -4px @shadow-color;
     .@{table-prefix-cls}-header {
       overflow-y: hidden;
     }
     // hide scrollbar in left fixed columns
     .@{table-prefix-cls}-body-inner {
-      margin-right: -20px;
-      padding-right: 20px;
+      .margin-idir(-20px);
+      .padding-idir(20px);
     }
     .@{table-prefix-cls}-fixed-header & .@{table-prefix-cls}-body-inner {
-      padding-right: 0;
+      .padding-idir(0);
     }
     &,
     table {
@@ -576,7 +576,7 @@
   }
 
   &-fixed-right {
-    right: 0;
+    .posiDir(0);
     box-shadow: -6px 0 6px -4px @shadow-color;
     &,
     table {

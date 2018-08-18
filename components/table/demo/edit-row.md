@@ -1,7 +1,7 @@
 ---
 order: 23
 title:
-  en-US: Editable Rows
+  en-US: ردیف‌های قابل ادیت شدن
   zh-CN: 可编辑行
 ---
 
@@ -162,7 +162,7 @@ class EditableTable extends React.Component {
         });
         this.setState({ data: newData, editingKey: '' });
       } else {
-        newData.push(row);
+        newData.push(data);
         this.setState({ data: newData, editingKey: '' });
       }
     });

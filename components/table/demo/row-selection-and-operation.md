@@ -18,13 +18,13 @@ To perform operations and clear selections after selecting some rows, use `rowSe
 import { Table, Button } from 'antd';
 
 const columns = [{
-  title: 'Name',
+  title: 'نام',
   dataIndex: 'name',
 }, {
-  title: 'Age',
+  title: 'سن',
   dataIndex: 'age',
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
 }];
 
@@ -76,10 +76,10 @@ class App extends React.Component {
             disabled={!hasSelected}
             loading={loading}
           >
-            Reload
+            بارگذاری مجدد
           </Button>
-          <span style={{ marginLeft: 8 }}>
-            {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
+          <span style={{ marginRight: 8 }}>
+            {hasSelected ? `انتخاب ${selectedRowKeys.length} آیتم` : ''}
           </span>
         </div>
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />

@@ -1,7 +1,7 @@
 ---
 order: 2
 title:
-  en-US: selection
+  en-US: انتخاب
   zh-CN: 可选择
 ---
 
@@ -21,14 +21,14 @@ Rows can be selectable by making first column as a selectable column.
 import { Table } from 'antd';
 
 const columns = [{
-  title: 'Name',
+  title: 'نام',
   dataIndex: 'name',
   render: text => <a href="javascript:;">{text}</a>,
 }, {
-  title: 'Age',
+  title: 'سن',
   dataIndex: 'age',
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
 }];
 const data = [{
@@ -65,6 +65,5 @@ const rowSelection = {
 };
 
 ReactDOM.render(
-  <Table rowSelection={rowSelection} columns={columns} dataSource={data} />,
-  mountNode);
+  <Table rowSelection={rowSelection} columns={columns} dataSource={data} />, mountNode);
 ````

@@ -36,49 +36,47 @@ function dragDirection(
   }
 }
 
-class BodyRow extends React.Component {
-  render() {
-    const {
-      isOver,
-      connectDragSource,
-      connectDropTarget,
-      moveRow,
-      dragRow,
-      clientOffset,
-      sourceClientOffset,
+let BodyRow = (props) => {
+  const {
+    isOver,
+    connectDragSource,
+    connectDropTarget,
+    moveRow,
+    dragRow,
+    clientOffset,
+    sourceClientOffset,
+    initialClientOffset,
+    ...restProps
+  } = props;
+  const style = { ...restProps.style, cursor: 'move' };
+
+  let className = restProps.className;
+  if (isOver && initialClientOffset) {
+    const direction = dragDirection(
+      dragRow.index,
+      restProps.index,
       initialClientOffset,
-      ...restProps
-    } = this.props;
-    const style = { ...restProps.style, cursor: 'move' };
-
-    let className = restProps.className;
-    if (isOver && initialClientOffset) {
-      const direction = dragDirection(
-        dragRow.index,
-        restProps.index,
-        initialClientOffset,
-        clientOffset,
-        sourceClientOffset
-      );
-      if (direction === 'downward') {
-        className += ' drop-over-downward';
-      }
-      if (direction === 'upward') {
-        className += ' drop-over-upward';
-      }
-    }
-
-    return connectDragSource(
-      connectDropTarget(
-        <tr
-          {...restProps}
-          className={className}
-          style={style}
-        />
-      )
+      clientOffset,
+      sourceClientOffset
     );
+    if (direction === 'downward') {
+      className += ' drop-over-downward';
+    }
+    if (direction === 'upward') {
+      className += ' drop-over-upward';
+    }
   }
-}
+
+  return connectDragSource(
+    connectDropTarget(
+      <tr
+        {...restProps}
+        className={className}
+        style={style}
+      />
+    )
+  );
+};
 
 const rowSource = {
   beginDrag(props) {
@@ -109,7 +107,7 @@ const rowTarget = {
   },
 };
 
-const DragableBodyRow = DropTarget('row', rowTarget, (connect, monitor) => ({
+BodyRow = DropTarget('row', rowTarget, (connect, monitor) => ({
   connectDropTarget: connect.dropTarget(),
   isOver: monitor.isOver(),
   sourceClientOffset: monitor.getSourceClientOffset(),
@@ -158,7 +156,7 @@ class DragSortingTable extends React.Component {
 
   components = {
     body: {
-      row: DragableBodyRow,
+      row: BodyRow,
     },
   }
 

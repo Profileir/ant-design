@@ -44,43 +44,42 @@ const data = [{
 
 ReactDOM.render(
   <Table dataSource={data}>
-    <ColumnGroup title="Name">
+    <ColumnGroup title="نام">
       <Column
-        title="First Name"
+        title="نام"
         dataIndex="firstName"
         key="firstName"
       />
       <Column
-        title="Last Name"
+        title="نام خانوادگی"
         dataIndex="lastName"
         key="lastName"
       />
     </ColumnGroup>
     <Column
-      title="Age"
+      title="سن"
       dataIndex="age"
       key="age"
     />
     <Column
-      title="Address"
+      title="آدرس"
       dataIndex="address"
       key="address"
     />
     <Column
-      title="Action"
+      title="عملیات"
       key="action"
       render={(text, record) => (
         <span>
-          <a href="javascript:;">Action 一 {record.name}</a>
+          <a href="javascript:;">عملیات 一 {record.name}</a>
           <Divider type="vertical" />
-          <a href="javascript:;">Delete</a>
+          <a href="javascript:;">حذف</a>
           <Divider type="vertical" />
           <a href="javascript:;" className="ant-dropdown-link">
-            More actions <Icon type="down" />
+            عملیات بیشتر <Icon type="down" />
           </a>
         </span>
       )}
     />
-  </Table>,
-  mountNode);
+  </Table>, mountNode);
 ````

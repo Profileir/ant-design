@@ -1,7 +1,7 @@
 ---
 order: 0
 title:
-  en-US: Basic Usage
+  en-US: استفاده اصلی
   zh-CN: 基本用法
 ---
 
@@ -22,24 +22,24 @@ const columns = [{
   key: 'name',
   render: text => <a href="javascript:;">{text}</a>,
 }, {
-  title: 'Age',
+  title: 'نام',
   dataIndex: 'age',
   key: 'age',
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
   key: 'address',
 }, {
-  title: 'Action',
+  title: 'عملیات',
   key: 'action',
   render: (text, record) => (
     <span>
-      <a href="javascript:;">Action 一 {record.name}</a>
+      <a href="javascript:;">عملیات 一 {record.name}</a>
       <Divider type="vertical" />
-      <a href="javascript:;">Delete</a>
+      <a href="javascript:;">حذف</a>
       <Divider type="vertical" />
       <a href="javascript:;" className="ant-dropdown-link">
-        More actions <Icon type="down" />
+        عملیات بیشتر <Icon type="down" />
       </a>
     </span>
   ),

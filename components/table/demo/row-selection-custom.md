@@ -1,7 +1,7 @@
 ---
 order: 4
 title:
-  en-US: Custom selection
+  en-US: شخصی کردن سلکشن
   zh-CN: 自定义选择项
 ---
 
@@ -18,13 +18,13 @@ Use `rowSelection.selections` custom selections, default no select dropdown, sho
 import { Table } from 'antd';
 
 const columns = [{
-  title: 'Name',
+  title: 'نام',
   dataIndex: 'name',
 }, {
-  title: 'Age',
+  title: 'سن',
   dataIndex: 'age',
 }, {
-  title: 'Address',
+  title: 'آدرس',
   dataIndex: 'address',
 }];
 
@@ -56,7 +56,7 @@ class App extends React.Component {
       hideDefaultSelections: true,
       selections: [{
         key: 'all-data',
-        text: 'Select All Data',
+        text: 'انتخاب همه',
         onSelect: () => {
           this.setState({
             selectedRowKeys: [...Array(46).keys()], // 0...45
@@ -64,7 +64,7 @@ class App extends React.Component {
         },
       }, {
         key: 'odd',
-        text: 'Select Odd Row',
+        text: 'انتخاب فردها',
         onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
@@ -77,7 +77,7 @@ class App extends React.Component {
         },
       }, {
         key: 'even',
-        text: 'Select Even Row',
+        text: 'انتخاب زوج‌ها',
         onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {

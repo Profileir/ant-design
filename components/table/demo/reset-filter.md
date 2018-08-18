@@ -1,7 +1,7 @@
 ---
 order: 7
 title:
-  en-US: Reset filters and sorters
+  en-US: ریست کردن تنظیم فیلترها و انتخابگرها
   zh-CN: 可控的筛选和排序
 ---
 
@@ -85,7 +85,7 @@ class App extends React.Component {
     sortedInfo = sortedInfo || {};
     filteredInfo = filteredInfo || {};
     const columns = [{
-      title: 'Name',
+      title: 'نام',
       dataIndex: 'name',
       key: 'name',
       filters: [
@@ -97,13 +97,13 @@ class App extends React.Component {
       sorter: (a, b) => a.name.length - b.name.length,
       sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
     }, {
-      title: 'Age',
+      title: 'سن',
       dataIndex: 'age',
       key: 'age',
       sorter: (a, b) => a.age - b.age,
       sortOrder: sortedInfo.columnKey === 'age' && sortedInfo.order,
     }, {
-      title: 'Address',
+      title: 'آدرس',
       dataIndex: 'address',
       key: 'address',
       filters: [
@@ -118,9 +118,9 @@ class App extends React.Component {
     return (
       <div>
         <div className="table-operations">
-          <Button onClick={this.setAgeSort}>Sort age</Button>
-          <Button onClick={this.clearFilters}>Clear filters</Button>
-          <Button onClick={this.clearAll}>Clear filters and sorters</Button>
+          <Button onClick={this.setAgeSort}>مرتب سازی براساس سن</Button>
+          <Button onClick={this.clearFilters}>پاک کردن فیلترها</Button>
+          <Button onClick={this.clearAll}>پاک کردن فیلترها و مرتب سازی</Button>
         </div>
         <Table columns={columns} dataSource={data} onChange={this.handleChange} />
       </div>
