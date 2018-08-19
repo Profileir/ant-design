@@ -85,7 +85,7 @@
   &-placement-rightBottom &-arrow {
     .posDir(@tooltip-distance - @tooltip-arrow-width);
     border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
-    border-right-color: @tooltip-arrow-color;
+    .idirBorderColor(@tooltip-arrow-color);
   }
 
   &-placement-right &-arrow {
@@ -106,7 +106,7 @@
   &-placement-leftBottom &-arrow {
     right: @tooltip-distance - @tooltip-arrow-width;
     border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
-    border-left-color: @tooltip-arrow-color;
+    .dirBorderColor(@tooltip-arrow-color);
   }
 
   &-placement-left &-arrow {

@@ -163,13 +163,13 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    border-right: @border-width-base @border-style-base @border-color-split;
+    .idirBorder(@border-width-base @border-style-base @border-color-split);
     overflow: auto;
     &:first-child {
       border-radius: @border-radius-base 0 0 @border-radius-base;
     }
     &:last-child {
-      border-right-color: transparent;
+      .idirBorderColor(transparent);
       .margin-idir(-1px);
       border-radius: 0 @border-radius-base @border-radius-base 0;
     }

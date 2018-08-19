@@ -81,7 +81,7 @@
   &-select {
     .dir();
     font-size: @font-size-base;
-    border-left: @border-width-base @border-style-base @border-color-split;
+    .dirBorder(@border-width-base @border-style-base @border-color-split);
     box-sizing: border-box;
     width: @time-picker-panel-column-width;
     overflow: hidden;
@@ -93,12 +93,12 @@
     }
 
     &:first-child {
-      border-left: 0;
+      .dirBorder(0);
       .margin-dir(0);
     }
 
     &:last-child {
-      border-right: 0;
+      .idirBorder(0);
     }
 
     &:only-child {
