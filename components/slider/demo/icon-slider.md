@@ -20,9 +20,11 @@ class IconSlider extends React.Component {
   state = {
     value: 0,
   }
+
   handleChange = (value) => {
     this.setState({ value });
   }
+
   render() {
     const { max, min } = this.props;
     const { value } = this.state;
@@ -45,7 +47,7 @@ ReactDOM.render(<IconSlider min={0} max={20} />, mountNode);
 ````css
 .icon-wrapper {
   position: relative;
-  padding: 0px 30px;
+  padding: 0 30px;
 }
 
 .icon-wrapper .anticon {

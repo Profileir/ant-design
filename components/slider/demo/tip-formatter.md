@@ -24,7 +24,5 @@ ReactDOM.render(
   <div>
     <Slider tipFormatter={formatter} />
     <Slider tipFormatter={null} />
-  </div>,
-  mountNode
-);
+  </div>, mountNode);
 ````
