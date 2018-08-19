@@ -3,7 +3,7 @@ ul.anticons-list {
   list-style: none;
   overflow: hidden;
   li {
-    float: left;
+    .dir();
     width: 16.66%;
     text-align: center;
     list-style: none;
@@ -53,7 +53,7 @@ ul.anticons-list {
     &:after {
       position: absolute;
       top: 0;
-      left: 0;
+      .posDir(0);
       height: 100%;
       width: 100%;
       content: "Copied!";

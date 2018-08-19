@@ -32,7 +32,7 @@
       .@{spin-prefix-cls}-dot {
         position: absolute;
         top: 50%;
-        left: 50%;
+        .posDir(50%);
         margin: -@spin-dot-size / 2;
       }
       .@{spin-prefix-cls}-text {
@@ -92,7 +92,7 @@
     &:after {
       content: '';
       position: absolute;
-      left: 0;
+      .posDir(0);
       right: 0;
       top: 0;
       bottom: 0;
@@ -131,7 +131,7 @@
       animation: antSpinMove 1s infinite linear alternate;
       transform-origin: 50% 50%;
       &:nth-child(1) {
-        left: 0;
+        .posDir(0);
         top: 0;
       }
       &:nth-child(2) {
@@ -145,7 +145,7 @@
         animation-delay: 0.8s;
       }
       &:nth-child(4) {
-        left: 0;
+        .posDir(0);
         bottom: 0;
         animation-delay: 1.2s;
       }

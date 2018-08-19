@@ -19,7 +19,7 @@
 
     &-tail {
       position: absolute;
-      left: 4px;
+      .posDir(4px);
       top: 0.75em;
       height: 100%;
       border-left: 2px solid @timeline-color;
@@ -66,7 +66,7 @@
       padding: 3px 1px;
       transform: translate(-50%, -50%);
       top: 5.5px;
-      left: 5px;
+      .posDir(5px);
       width: auto;
     }
 
@@ -93,20 +93,20 @@
       &-tail,
       &-head,
       &-head-custom {
-        left: 50%;
+        .posDir(50%);
       }
 
       &-head {
-        margin-left: -4px;
+        .margin-dir(-4px);
         &-custom {
-          margin-left: 1px;
+          .margin-dir(1px);
         }
       }
 
       &-left {
         .@{timeline-prefix-cls}-item-content {
           text-align: left;
-          left: 50%;
+          .posDir(50%);
           width: 50%;
         }
       }
@@ -115,9 +115,9 @@
         .@{timeline-prefix-cls}-item-content {
           text-align: right;
           right: 50%;
-          margin-right: 18px;
+          .margin-idir(18px);
           width: 50%;
-          left: -30px;
+          .posDir(-30px);
         }
       }
     }
@@ -128,12 +128,12 @@
       .@{timeline-prefix-cls}-item-tail,
       .@{timeline-prefix-cls}-item-head,
       .@{timeline-prefix-cls}-item-head-custom {
-        left: 100%;
+        .posDir(100%);
       }
       .@{timeline-prefix-cls}-item-content {
         right: 0;
         width: 100%;
-        left: -30px;
+        .posDir(-30px);
       }
     }
   }

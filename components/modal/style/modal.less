@@ -15,7 +15,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    .posDir(0);
     z-index: @zindex-modal;
     -webkit-overflow-scrolling: touch;
     outline: 0;
@@ -101,7 +101,7 @@
     text-align: right;
     border-radius: 0 0 @border-radius-base @border-radius-base;
     button + button {
-      margin-left: 8px;
+      .margin-dir(8px);
       margin-bottom: 0;
     }
   }
@@ -117,7 +117,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    left: 0;
+    .posDir(0);
     bottom: 0;
     background-color: @modal-mask-bg; // lesshint duplicateProperty: false
     height: 100%;

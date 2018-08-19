@@ -63,7 +63,7 @@
     .posiDir(percentage((@index / @grid-columns)));
   }
   .@{ant-prefix}-col@{class}-offset-@{index} {
-    margin-left: percentage((@index / @grid-columns));
+    .margin-dir(percentage((@index / @grid-columns)));
   }
   .@{ant-prefix}-col@{class}-order-@{index} {
     order: @index;

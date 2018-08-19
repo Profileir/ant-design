@@ -45,7 +45,7 @@
         vertical-align: top;
         transition: transform 0.24s;
         top: 0;
-        left: @padding-md;
+        .posDir(@padding-md);
         &:before {
           content: @idirArrow;
         }
@@ -58,7 +58,7 @@
 
     &.@{collapse-prefix-cls}-no-arrow {
       > .@{collapse-prefix-cls}-header {
-        padding-left: 12px;
+        .padding-dir(12px);
       }
     }
   }

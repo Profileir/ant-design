@@ -24,7 +24,7 @@
   &-placement-right,
   &-placement-rightTop,
   &-placement-rightBottom {
-    padding-left: @tooltip-distance;
+    .padding-dir(@tooltip-distance);
   }
   &-placement-bottom,
   &-placement-bottomLeft,
@@ -34,7 +34,7 @@
   &-placement-left,
   &-placement-leftTop,
   &-placement-leftBottom {
-    padding-right: @tooltip-distance;
+    .padding-idir(@tooltip-distance);
   }
 
   // Wrapper for the tooltip content
@@ -68,12 +68,12 @@
   }
 
   &-placement-top &-arrow {
-    left: 50%;
-    margin-left: -@tooltip-arrow-width;
+    .posDir(50%);
+    .margin-dir(-@tooltip-arrow-width);
   }
 
   &-placement-topLeft &-arrow {
-    left: 16px;
+    .posDir(16px);
   }
 
   &-placement-topRight &-arrow {
@@ -83,7 +83,7 @@
   &-placement-right &-arrow,
   &-placement-rightTop &-arrow,
   &-placement-rightBottom &-arrow {
-    left: @tooltip-distance - @tooltip-arrow-width;
+    .posDir(@tooltip-distance - @tooltip-arrow-width);
     border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
     border-right-color: @tooltip-arrow-color;
   }
@@ -131,12 +131,12 @@
   }
 
   &-placement-bottom &-arrow {
-    left: 50%;
-    margin-left: -@tooltip-arrow-width;
+    .posDir(50%);
+    .margin-dir(-@tooltip-arrow-width);
   }
 
   &-placement-bottomLeft &-arrow {
-    left: 16px;
+    .posDir(16px);
   }
 
   &-placement-bottomRight &-arrow {

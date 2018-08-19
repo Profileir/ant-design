@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   top: -1px;
-  left: -1px;
+  .posDir(-1px);
   bottom: -1px;
   right: -1px;
   border-radius: inherit;
@@ -28,7 +28,7 @@
   to {
     opacity: 0;
     top: -@wave-animation-width;
-    left: -@wave-animation-width;
+    .posDir(-@wave-animation-width);
     bottom: -@wave-animation-width;
     right: -@wave-animation-width;
     border-width: @wave-animation-width;

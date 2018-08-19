@@ -22,7 +22,7 @@
     box-shadow: @box-shadow-base;
     background-clip: padding-box;
     overflow: hidden;
-    left: -2px;
+    .posDir(-2px);
   }
 
   &-input {
@@ -79,7 +79,7 @@
   }
 
   &-select {
-    float: left;
+    .dir();
     font-size: @font-size-base;
     border-left: @border-width-base @border-style-base @border-color-split;
     box-sizing: border-box;
@@ -94,7 +94,7 @@
 
     &:first-child {
       border-left: 0;
-      margin-left: 0;
+      .margin-dir(0);
     }
 
     &:last-child {

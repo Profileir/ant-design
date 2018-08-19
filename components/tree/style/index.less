@@ -70,7 +70,7 @@
             &:before {
               display: inline-block;
               position: absolute;
-              left: 0;
+              .posDir(0);
               width: 24px;
               height: 24px;
               .iconfont-font("\E64D");
@@ -182,11 +182,11 @@
     }
   }
   &-icon__open {
-    margin-right: 2px;
+    .margin-idir(2px);
     vertical-align: top;
   }
   &-icon__close {
-    margin-right: 2px;
+    .margin-idir(2px);
     vertical-align: top;
   }
   // Tree with line
@@ -215,7 +215,7 @@
       border-left: 1px solid @border-color-base;
       height: 100%;
       position: absolute;
-      left: 12px;
+      .posDir(12px);
       margin: 22px 0;
     }
   }

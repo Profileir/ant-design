@@ -32,7 +32,7 @@
     }
 
     .@{confirm-prefix-cls}-content {
-      margin-left: 38px;
+      .margin-dir(38px);
       font-size: @font-size-base;
       color: @text-color;
       margin-top: 8px;
@@ -40,17 +40,17 @@
 
     > .@{iconfont-css-prefix} {
       font-size: 22px;
-      margin-right: 16px;
-      float: left;
+      .margin-idir(16px);
+      .dir();
     }
   }
 
   .@{confirm-prefix-cls}-btns {
     margin-top: 24px;
-    float: right;
+    .idir();
 
     button + button {
-      margin-left: 8px;
+      .margin-dir(8px);
       margin-bottom: 0;
     }
   }
