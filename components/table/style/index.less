@@ -74,11 +74,11 @@
 
   &-thead > tr:first-child > th {
     &:first-child {
-      border-top-left-radius: @border-radius-base;
+      .border-top-dir-radius(@border-radius-base);
     }
 
     &:last-child {
-      border-top-right-radius: @border-radius-base;
+      .border-top-idir-radius(@border-radius-base);
     }
   }
 
@@ -318,8 +318,8 @@
 
       .@{table-prefix-cls}-body > table {
         border-top: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        .border-top-dir-radius(0);
+        .border-top-idir-radius(0);
       }
 
       .@{table-prefix-cls}-body-inner > table {
@@ -571,7 +571,7 @@
       border-radius: @border-radius-base 0 0 0;
     }
     .ant-table-thead > tr > th:last-child {
-      border-top-right-radius: 0;
+      .border-top-idir-radius(0);
     }
   }
 
@@ -589,7 +589,7 @@
       pointer-events: none;
     }
     .ant-table-thead > tr > th:first-child {
-      border-top-left-radius: 0;
+      .border-top-dir-radius(0);
     }
   }
 

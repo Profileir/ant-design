@@ -117,6 +117,32 @@
   border-bottom-left-radius: @value;
 }
 
+.border-top-dir-radius (@value) when (@dir="ltr") {
+  border-top-left-radius: @value;
+}
+.border-top-dir-radius (@value) when not (@dir="ltr") {
+  border-top-right-radius: @value;
+}
+.border-top-idir-radius (@value) when (@dir="ltr") {
+  border-top-right-radius: @value;
+}
+.border-top-idir-radius (@value) when not (@dir="ltr") {
+  border-top-left-radius: @value;
+}
+
+.border-bottom-dir-radius (@value) when (@dir="ltr") {
+  border-bottom-left-radius: @value;
+}
+.border-bottom-dir-radius (@value) when not (@dir="ltr") {
+  border-bottom-right-radius: @value;
+}
+.border-bottom-idir-radius (@value) when (@dir="ltr") {
+  border-bottom-right-radius: @value;
+}
+.border-bottom-idir-radius (@value) when not (@dir="ltr") {
+  border-bottom-left-radius: @value;
+}
+
 //Border colors
 .dirBorderColor (@value) when (@dir="ltr") {
   border-left-color: @value;

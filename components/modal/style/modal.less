@@ -98,7 +98,7 @@
   &-footer {
     border-top: @border-width-base @border-style-base @border-color-split;
     padding: 10px 16px;
-    text-align: right;
+    .idirAlign();
     border-radius: 0 0 @border-radius-base @border-radius-base;
     button + button {
       .margin-dir(8px);
@@ -147,7 +147,7 @@
     display: inline-block;
     vertical-align: middle;
     top: 0;
-    text-align: left;
+    .dirAlign();
   }
   .@{table-prefix-cls} {
     &-body {

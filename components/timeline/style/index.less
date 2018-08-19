@@ -71,7 +71,7 @@
     }
 
     &-content {
-      margin: 0 0 0 18px;
+      .margin(0; 0; 0; 18px);
       position: relative;
       top: -(@font-size-base * @line-height-base - @font-size-base) + 1px;
     }
@@ -105,7 +105,7 @@
 
       &-left {
         .@{timeline-prefix-cls}-item-content {
-          text-align: left;
+          .dirAlign();
           .posDir(50%);
           width: 50%;
         }
@@ -113,7 +113,7 @@
 
       &-right {
         .@{timeline-prefix-cls}-item-content {
-          text-align: right;
+          .idirAlign();
           right: 50%;
           .margin-idir(18px);
           width: 50%;
