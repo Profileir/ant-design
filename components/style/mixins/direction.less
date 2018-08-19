@@ -217,3 +217,11 @@
   box-shadow: -@dir @restValue;
 }
 
+//Rotates
+.rotate (@value) when (@dir="ltr") {
+  transform: rotate(@value);
+}
+.rotate (@value) when not (@dir="ltr") {
+  transform: rotate(-(@value));
+}
+
