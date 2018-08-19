@@ -6,19 +6,19 @@
 .@{ant-prefix}-anchor {
   .reset-component;
   position: relative;
-  padding-left: @anchor-border-width;
+  .padding-dir(@anchor-border-width);
 
   &-wrapper {
     background-color: @component-background;
     overflow: auto;
-    padding-left: 4px;
-    margin-left: -4px;
+    .padding-dir(4px);
+    .margin-dir(-4px);
   }
 
   &-ink {
     position: absolute;
     height: 100%;
-    left: 0;
+    .posDir(0);
     top: 0;
     &:before {
       content: ' ';
@@ -37,9 +37,9 @@
       border-radius: 8px;
       border: 2px solid @primary-color;
       background-color: @component-background;
-      left: 50%;
+      .posDir(50%);
       transition: top .3s ease-in-out;
-      transform: translateX(-50%);
+      .translateX(-50%);
       &.visible {
         display: inline-block;
       }
@@ -51,7 +51,7 @@
   }
 
   &-link {
-    padding: 8px 0 8px 16px;
+    .padding(8px; 0; 8px; 16px);
     line-height: 1;
 
     &-title {

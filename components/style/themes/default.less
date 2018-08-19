@@ -1,9 +1,23 @@
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 @import "../color/colors";
-@import "../direction/directions";
 
 // The prefix to use on all css classes from ant.
 @ant-prefix             : ant;
+
+//Directions
+@dir: "rtl";
+@main-website-align: "right";
+
+@dirArrow: "\E61F";
+@idirArrow: "\E620";
+
+@shadow-1-left          : 2px 0 8px @shadow-color;
+@shadow-1-right         : -2px 0 8px @shadow-color;
+// @dir: "ltr";
+// @main-website-align: "left";
+
+// @dirArrow: "\E620";
+// @idirArrow: "\E61F";
 
 // -------- Colors -----------
 @primary-color          : @blue-6;
@@ -115,8 +129,6 @@
 @box-shadow-base        : @shadow-1-down;
 @shadow-1-up            : 0 2px 8px @shadow-color;
 @shadow-1-down          : 0 2px 8px @shadow-color;
-@shadow-1-left          : -2px 0 8px @shadow-color;
-@shadow-1-right         : 2px 0 8px @shadow-color;
 @shadow-2               : 0 4px 12px @shadow-color;
 
 // Buttons

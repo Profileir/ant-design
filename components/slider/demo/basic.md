@@ -20,11 +20,9 @@ class Demo extends React.Component {
   state = {
     disabled: false,
   };
-
   handleDisabledChange = (disabled) => {
     this.setState({ disabled });
   }
-
   render() {
     const { disabled } = this.state;
     return (

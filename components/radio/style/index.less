@@ -224,7 +224,7 @@ span.@{radio-prefix-cls} + * {
     background: @radio-button-bg;
     border-color: @radio-dot-color;
     color: @radio-dot-color;
-    box-shadow: -1px 0 0 0 @radio-dot-color;
+    .box-shadow(-1px; 0 0 0 @radio-dot-color);
     z-index: 1;
     &::before {
       background-color: @radio-dot-color !important;
@@ -237,13 +237,13 @@ span.@{radio-prefix-cls} + * {
 
     &:hover {
       border-color: @radio-button-hover-color;
-      box-shadow: -1px 0 0 0 @radio-button-hover-color;
+      .box-shadow(-1px; 0 0 0 @radio-button-hover-color);
       color: @radio-button-hover-color;
     }
 
     &:active {
       border-color: @radio-button-active-color;
-      box-shadow: -1px 0 0 0 @radio-button-active-color;
+      .box-shadow(-1px; 0 0 0 @radio-button-active-color);
       color: @radio-button-active-color;
     }
   }

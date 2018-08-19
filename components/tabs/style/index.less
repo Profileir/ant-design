@@ -122,14 +122,14 @@
     right: 2px;
 
     &-icon:before {
-      content: "\e61f";
+      content: @idirArrow;
     }
   }
 
   &-tab-prev {
     left: 0;
     &-icon:before {
-      content: "\e620";
+      content: @dirArrow;
     }
     :root & {
       filter: none;
@@ -408,7 +408,7 @@
   > .@{tab-prefix-cls}-content {
     &-animated {
       transform: none !important;
-      margin-left: 0 !important;
+      .margin-dir(~'0 !important');
     }
     > .@{tab-prefix-cls}-tabpane-inactive {
       display: none;

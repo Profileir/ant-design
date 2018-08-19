@@ -41,28 +41,28 @@
   }
 
   &-left {
-    float: left;
+    .dir();
     .@{calendar-prefix-cls} {
       &-time-picker-inner {
-        border-right: 1px solid @border-color-split;
+        .idirBorder(1px solid @border-color-split);
       }
     }
   }
 
   &-right {
-    float: right;
+    .idir();
     .@{calendar-prefix-cls} {
       &-time-picker-inner {
-        border-left: 1px solid @border-color-split;
+        .dirBorder(1px solid @border-color-split);
       }
     }
   }
 
   &-middle {
     position: absolute;
-    left: 50%;
+    .posDir(50%);
     width: 20px;
-    margin-left: -132px;
+    .margin-dir(-132px);
     text-align: center;
     height: @input-box-height;
     line-height: @input-box-height;
@@ -70,15 +70,15 @@
   }
 
   &-right .@{calendar-prefix-cls}-date-input-wrap {
-    margin-left: -118px;
+    .margin-dir(-118px);
   }
 
   &.@{calendar-prefix-cls}-time &-middle {
-    margin-left: -12px;
+    .margin-dir(-12px);
   }
 
   &.@{calendar-prefix-cls}-time &-right .@{calendar-prefix-cls}-date-input-wrap {
-    margin-left: 0;
+    .margin-dir(0);
   }
 
   .@{calendar-prefix-cls}-input-wrap {
@@ -92,8 +92,8 @@
     height: @input-height-sm;
     border: 0;
     box-shadow: none;
-    padding-left: 0;
-    padding-right: 0;
+    .padding-dir(0);
+    .padding-idir(0);
 
     &:focus {
       box-shadow: none;
@@ -142,17 +142,17 @@
       position: absolute;
       top: 4px;
       bottom: 4px;
-      left: 0;
-      right: 0;
+      .posDir(0);
+      .posiDir(0);
     }
   }
 
   // `div` for selector specificity
   div&-quick-selector {
-    text-align: left;
+    .dirAlign();
 
     > a {
-      margin-right: 8px;
+      .margin-idir(8px);
     }
   }
 
@@ -198,7 +198,7 @@
       }
     }
     .@{calendar-prefix-cls}-footer .@{calendar-prefix-cls}-time-picker-btn {
-      margin-right: 8px;
+      .margin-idir(8px);
     }
     .@{calendar-prefix-cls}-today-btn {
       margin: 8px 12px;

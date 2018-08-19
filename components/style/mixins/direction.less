@@ -182,3 +182,12 @@
 .translateY (@value) when not (@dir="ltr") {
   transform: translateY(-(@value));
 }
+
+//Box Shadow
+.box-shadow(@dir; @restValue) when (@dir="ltr") {
+  box-shadow: @dir @restValue;
+}
+.box-shadow(@dir; @restValue) when not (@dir="ltr") {
+  box-shadow: -@dir @restValue;
+}
+

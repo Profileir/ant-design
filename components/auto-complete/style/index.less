@@ -15,14 +15,14 @@
         border: 0;
         box-shadow: none;
         &__rendered {
-          margin-left: 0;
-          margin-right: 0;
+          .margin-dir(0);
+          .margin-idir(0);
           height: 100%;
           line-height: @input-height-base;
         }
         &__placeholder {
-          margin-left: (@input-padding-horizontal-base + 1px);
-          margin-right: (@input-padding-horizontal-base + 1px);
+          .margin-dir(@input-padding-horizontal-base + 1px);
+          .margin-idir(@input-padding-horizontal-base + 1px);
         }
 
         &--single {
@@ -34,12 +34,12 @@
     // Fix https://github.com/ant-design/ant-design/issues/7800
     .@{select-prefix-cls}-search--inline {
       position: static;
-      float: left;
+      .dir();
     }
 
     &-allow-clear {
       .@{select-prefix-cls}-selection:hover .@{select-prefix-cls}-selection__rendered {
-        margin-right: 0 !important;
+        .margin-idir(~'0 !important');
       }
     }
 
