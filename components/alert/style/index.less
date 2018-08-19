@@ -10,7 +10,7 @@
 .@{alert-prefix-cls} {
   .reset-component;
   position: relative;
-  padding: 8px 15px 8px 37px;
+  .padding(8px; 15px; 8px; 37px);
   border-radius: @border-radius-base;
 
   &&-no-icon {
@@ -64,7 +64,7 @@
   &-close-icon {
     font-size: @font-size-sm;
     position: absolute;
-    right: 16px;
+    .posiDir(16px);
     top: 8px;
     line-height: 22px;
     overflow: hidden;
@@ -81,7 +81,7 @@
 
   &-close-text {
     position: absolute;
-    right: 16px;
+    .posiDir(16px);
   }
 
   &-with-description {
@@ -106,7 +106,7 @@
   &-with-description &-close-icon {
     position: absolute;
     top: 16px;
-    right: 16px;
+    .posiDir(16px);
     cursor: pointer;
     font-size: @font-size-base;
   }

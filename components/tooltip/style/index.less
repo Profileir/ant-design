@@ -77,7 +77,7 @@
   }
 
   &-placement-topRight &-arrow {
-    right: 16px;
+    .posiDir(16px);
   }
 
   &-placement-right &-arrow,
@@ -104,7 +104,7 @@
   &-placement-left &-arrow,
   &-placement-leftTop &-arrow,
   &-placement-leftBottom &-arrow {
-    right: @tooltip-distance - @tooltip-arrow-width;
+    .posiDir(@tooltip-distance - @tooltip-arrow-width);
     border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
     .dirBorderColor(@tooltip-arrow-color);
   }
@@ -140,6 +140,6 @@
   }
 
   &-placement-bottomRight &-arrow {
-    right: 16px;
+    .posiDir(16px);
   }
 }

@@ -38,7 +38,7 @@
     &-wrap {
       box-sizing: border-box;
       position: relative;
-      padding: 7px 2px 7px @control-padding-horizontal;
+      .padding(7px; 2px; 7px; @control-padding-horizontal);
       border-bottom: @border-width-base @border-style-base @border-color-split;
     }
 
@@ -49,7 +49,7 @@
 
   &-clear-btn {
     position: absolute;
-    right: 8px;
+    .posiDir(8px);
     cursor: pointer;
     overflow: hidden;
     width: 20px;
@@ -208,7 +208,7 @@
     width: 14px;
     height: 14px;
     line-height: 14px;
-    right: @control-padding-horizontal - 1px;
+    .posiDir(@control-padding-horizontal - 1px);
     color: @disabled-color;
     top: 50%;
     margin-top: -7px;
@@ -230,6 +230,6 @@
   }
 
   &-small &-icon {
-    right: @control-padding-horizontal-sm - 1px;
+    .posiDir(@control-padding-horizontal-sm - 1px);
   }
 }

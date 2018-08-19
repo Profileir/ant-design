@@ -68,7 +68,7 @@
     &-clear {
       opacity: 0;
       position: absolute;
-      right: @control-padding-horizontal;
+      .posiDir(@control-padding-horizontal);
       z-index: 2;
       background: @component-background;
       top: 50%;
@@ -94,7 +94,7 @@
       position: absolute;
       z-index: 1;
       top: 50%;
-      right: @control-padding-horizontal;
+      .posiDir(@control-padding-horizontal);
       width: 12px;
       height: 12px;
       font-size: 12px;
@@ -114,7 +114,7 @@
 
   &-picker-small &-picker-clear,
   &-picker-small &-picker-arrow {
-    right: @control-padding-horizontal-sm;
+    .posiDir(@control-padding-horizontal-sm);
   }
 
   &-menus {
@@ -208,7 +208,7 @@
         .iconfont-size-under-12px(8px);
         color: @text-color-secondary;
         position: absolute;
-        right: @control-padding-horizontal;
+        .posiDir(@control-padding-horizontal);
       }
     }
     &-loading:after {
