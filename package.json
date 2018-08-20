@@ -1,6 +1,6 @@
 {
-  "name": "antd",
-  "version": "3.8.1",
+  "name": "@profile.ir/antd",
+  "version": "0.1.0",
   "title": "Ant Design",
   "description": "An enterprise-class UI design language and React-based implementation",
   "homepage": "http://ant.design/",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-design/ant-design"
+    "url": "git+https://github.com/ant-design/ant-design.git"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design/issues"
@@ -115,6 +115,7 @@
     "bisheng-plugin-description": "^0.1.1",
     "bisheng-plugin-react": "^0.6.0",
     "bisheng-plugin-toc": "^0.4.0",
+    "chai": "^4.1.2",
     "commander": "^2.11.0",
     "cross-env": "^5.0.3",
     "css-split-webpack-plugin": "^0.2.3",
@@ -144,6 +145,7 @@
     "lint-staged": "^7.0.0",
     "lz-string": "^1.4.4",
     "majo": "^0.6.2",
+    "mocha": "^5.2.0",
     "mockdate": "^2.0.1",
     "moment-timezone": "^0.5.5",
     "pre-commit": "^1.2.2",
@@ -233,5 +235,10 @@
     "dist/*",
     "es/**/style/*",
     "lib/**/style/*"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "author": "profile.ir <tasks.profile@gmail.com>"
 }
